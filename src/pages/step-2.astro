@@ -1,0 +1,45 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Product from '../components/Product.astro';
+import Cart from '../components/Cart.astro';
+---
+
+<Layout title="SdM Fake cart">
+
+	<main>
+		<div class="products container">
+			<div class="row my-3">
+				<div class="col">
+					<Product
+						id="Catalogo 2024"
+						title="Catalogo 2024"
+						price={25}
+						body="Catalogo della fiera"
+					/>
+				</div>
+			</div>
+		</div>
+
+		<div class="container my-3">
+			<div class="row">
+				<div class="col">
+					<a href="./" class="btn btn-primary">Indietro</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="container my-3">
+			<div class="row">
+				<div class="col">
+					<Cart />
+				</div>
+			</div>
+		</div>
+
+	</main>
+
+</Layout>
+
+<style>
+
+</style>

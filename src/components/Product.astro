@@ -1,0 +1,26 @@
+---
+interface Props {
+	title: string;
+	body: string;
+	price: number;
+	id: string;
+}
+
+const { title, body, price, id } = Astro.props;
+---
+
+<div class="product card" data-product={id}>
+	<div class="card-body">
+		<p class="card-title fs-5 fw-bold">{title}</p>
+		<p>{body} - € <span class="product-price">{price}</span></p>
+		<div class="quantity">
+			<button class="remove-quantity btn btn-secondary">-</button>
+			<span class="product-quantity px-3">0</span>
+			<button class="add-quantity btn btn-secondary">+</button>
+		</div>
+	</div>
+</div>
+
+<style>
+	
+</style>
