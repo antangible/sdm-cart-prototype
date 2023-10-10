@@ -2,13 +2,16 @@
 interface Props {
 	title: string;
 	subtitle: string;
+    link: string;
+    icona: string;
 }
 
-const { title, subtitle } = Astro.props;
+const { icona, link, title, subtitle } = Astro.props;
 ---
 
 <div>
-    
+    <i class={icona}></i>
+    <a href={link}></a>
     <h1>{title}</h1>
     <h2>{subtitle}</h2>
 </div>

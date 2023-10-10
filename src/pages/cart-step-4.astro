@@ -26,9 +26,10 @@ import Cart from '../components/Cart.astro';
 					<label class="form-check-label" for="flexSwitchCheckDefault">Usa i miei dati per questo biglietto</label>
 				</div>
 
+				<!-- seleziona date -->
 
-				<div>
-					<h4>Seleziona le date</h4>
+				<div class="border-top pt-4 mt-4">
+					<h5 class="mb-0"><strong>Seleziona le date</strong></h5>
 					<p>Puoi selezionare al massimo 3 date</p>
 					<div class="py-4 d-flex">
 						<div class="w-100 pe-4">
@@ -60,6 +61,31 @@ import Cart from '../components/Cart.astro';
 					<div id="message"></div>
 
 				</div>
+
+				<!-- cross sell -->
+				
+				<div id="cross-sell-catalogo" class="border-top pt-4 mt-4 d-flex justify-content-between">
+					<div>
+						<h5 class="mb-0"><strong>Ritira catalogo in fiera</strong></h5>
+						<p>quanti cataloghi verranno ritirati da [te]?</p>
+					</div>
+					<div class="d-flex">
+						<p class="pe-4 mb-0 pt-2"><span id="quantita-cataloghi"></span> cataloghi da assegnare</p>
+						<div class="quantity"><button class="remove-quantity btn btn-secondary" disabled="">-</button><span class="product-quantity px-3">0</span><button class="add-quantity btn btn-secondary">+</button></div>
+					</div>
+				</div>
+
+				<div id="cross-sell-biglietti-atm" class="border-top pt-4 mt-4 d-flex justify-content-between">
+					<div>
+						<h5 class="mb-0"><strong>Assegna biglietti Atm</strong></h5>
+						<p>quanti biglietti sono intestati a [te]??</p>
+					</div>
+					<div class="d-flex">
+						<p class="pe-4 mb-0 pt-2"><span id="quantita-cataloghi"></span> biglietti da assegnare</p>
+						<div class="quantity"><button class="remove-quantity btn btn-secondary" disabled="">-</button><span class="product-quantity px-3">0</span><button class="add-quantity btn btn-secondary">+</button></div>
+					</div>
+				</div>
+
 
 			  </div>
 
@@ -130,6 +156,37 @@ import Cart from '../components/Cart.astro';
         });
     });
 </script>
+
+<!-- 
+<script>
+    // Funzione per verificare se il carrello contiene almeno un prodotto con id "Catalogo Saloni 2024"
+    function checkCartForCatalog() {
+        // Ottieni tutti gli elementi del carrello
+        const cartItems = document.querySelectorAll('.cart-item');
+        let hasCatalogProduct = false;
+
+        // Itera attraverso gli elementi del carrello
+        cartItems.forEach(item => {
+            // Verifica se l'elemento del carrello ha l'attributo data-product con valore "Catalogo Saloni 2024"
+            if (item.dataset.product === "Catalogo Saloni 2024") {
+                hasCatalogProduct = true;
+            }
+        });
+
+        // Ottieni l'elemento del div "cross-sell-catalogo"
+        const crossSellCatalogDiv = document.getElementById('cross-sell-catalogo');
+
+        // Mostra o nascondi il div in base alla presenza del prodotto "Catalogo Saloni 2024"
+        if (hasCatalogProduct) {
+            crossSellCatalogDiv.classList.remove('d-none');
+        } else {
+            crossSellCatalogDiv.classList.add('d-none');
+        }
+    }
+
+    // Esegui la funzione quando la pagina si carica
+    window.addEventListener('DOMContentLoaded', checkCartForCatalog);
+</script> -->
 
 
 

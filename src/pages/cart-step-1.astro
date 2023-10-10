@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Product from '../components/Product.astro';
 import Cart from '../components/Cart.astro';
+import Pagetitle from '../components/Pagetitle.astro';
 ---
 
 <Layout title="SdM Fake cart">
@@ -15,6 +16,11 @@ import Cart from '../components/Cart.astro';
 					<i class="fa-solid fa-ticket"></i>
 					<h1>Ciao [Andrea], <br>
 						Di quanti biglietti hai bisogno?</h1>
+
+						<Pagetitle
+						title="titolo prova"
+						subtitle="sottotitolo prova"
+						/>
 				</div>
 				
 				<div class="products container">
