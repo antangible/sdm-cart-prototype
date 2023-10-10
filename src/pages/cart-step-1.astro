@@ -12,79 +12,59 @@ import Pagetitle from '../components/Pagetitle.astro';
 		<div class="container">
 			<div class="row">
 			  <div class="col-md-8">
-				<div class="pb-4">
-					<i class="fa-solid fa-ticket"></i>
-					<h1>Ciao [Andrea], <br>
-						Di quanti biglietti hai bisogno?</h1>
 
-						<Pagetitle
-						title="titolo prova"
-						subtitle="sottotitolo prova"
-						/>
-				</div>
-				
-				<div class="products container">
-					<div class="row my-3">
-						<div class="col p-0">
-							<Product
-								id="Biglietto operatore - 1 giorno"
-								title="Biglietto operatore"
-								price={35}
-								body="1 giorno"
-							/>
-						</div>
-					</div>
-					<div class="row my-3">
-						<div class="col p-0">
-							<Product
-								id="Biglietto operatore - 3 giorni"
-								title="Biglietto operatore"
-								price={60}
-								body="3 giorni"
-							/>
-						</div>
-					</div>
-					<div class="row my-3">
-						<div class="col p-0">
-							<Product
-								id="Biglietto operatore - 6 giorni"
-								title="Biglietto operatore"
-								price={73}
-								body="6 giorni"
-							/>
-						</div>
-					</div>
-				</div>
+          <Pagetitle
+          title="Ciao <strong>[Andrea]</strong>, di quanti biglietti hai bisogno?"
+          />
+          
+          <div class="products container">
+            <div class="row my-3">
+              <div class="col p-0">
+                <Product
+                  id="Biglietto operatore - 1 giorno"
+                  title="Biglietto operatore"
+                  price={35}
+                  body="1 giorno"
+                />
+              </div>
+            </div>
+            <div class="row my-3">
+              <div class="col p-0">
+                <Product
+                  id="Biglietto operatore - 3 giorni"
+                  title="Biglietto operatore"
+                  price={60}
+                  body="3 giorni"
+                />
+              </div>
+            </div>
+            <div class="row my-3">
+              <div class="col p-0">
+                <Product
+                  id="Biglietto operatore - 6 giorni"
+                  title="Biglietto operatore"
+                  price={73}
+                  body="6 giorni"
+                />
+              </div>
+            </div>
+          </div>
 
-				<div id="alert-message" class="alert alert-danger d-none" role="alert">
-					Il carrello è vuoto. Aggiungi almeno un prodotto prima di procedere.
-				</div>
+          <div id="alert-message" class="alert alert-danger d-none" role="alert">
+            Il carrello è vuoto. Aggiungi almeno un prodotto prima di procedere.
+          </div>
 
 			  </div>
 			  <div class="col-md-4 d-none d-md-block">
 				<div class="bg-lightgrey shadow-sm p-4">
 					<p>Il tuo carrello</p>
 					<Cart />
-					<a href="cart-step-2" class="btn btn-primary">Procedi</a>
+					<a href="/cart-step-2/" class="btn btn-primary">Procedi</a>
 				</div>
 				</div>
 		  	</div>
 		</div>
-
-		<!-- carrello mobile -->
-
-		<div class="fixed-bottom d-md-none">
-			<div class="container my-3">
-				<div class="row">
-					<div class="col">
-						<Cart />
-						<a href="cart-step-2" class="btn btn-primary">Procedi</a>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		
+    		
 	</main>
 
 </Layout>

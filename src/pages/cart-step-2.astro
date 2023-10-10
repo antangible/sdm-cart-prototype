@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Product from '../components/Product.astro';
 import Cart from '../components/Cart.astro';
+import Pagetitle from '../components/Pagetitle.astro';
 ---
 
 <Layout title="SdM Fake cart">
@@ -11,11 +12,13 @@ import Cart from '../components/Cart.astro';
 		<div class="container">
 			<div class="row">
 			  <div class="col-md-8">
-				<div class="pb-4">
-					<a href="cart-step-1"><i class="fa-solid fa-chevron-left"></i> Indietro</a>
-					<i class="fa-solid fa-ticket"></i>
-					<h1>Vuoi acquistare il catalogo della fiera?</h1>
-				</div>
+
+				<Pagetitle
+				href="/cart-step-1/"
+				link="torna indietro"
+				title="Vuoi acquistare il catalogo della fiera?"
+				subtitle="Puoi acquistarlo ora e ritirarlo di persona quando accederai al Salone del Mobile. Riceverai via mail il voucher per il ritiro del catalogo in fiera."
+				/>
 				
 				<div class="products container">
 					<div class="row my-3">
@@ -34,25 +37,11 @@ import Cart from '../components/Cart.astro';
 				<div class="bg-lightgrey shadow-sm p-4">
 					<p>Il tuo carrello</p>
 					<Cart />
-					<a href="cart-step-3" class="btn btn-primary">Procedi</a>
+					<a href="/cart-step-3/" class="btn btn-primary">Procedi</a>
 				</div>
 				</div>
 		  	</div>
 		</div>
-
-		<!-- carrello mobile -->
-
-		<div class="fixed-bottom d-md-none">
-			<div class="container my-3">
-				<div class="row">
-					<div class="col">
-						<Cart />
-						<a href="cart-step-2" class="btn btn-primary">Procedi</a>
-					</div>
-				</div>
-			</div>
-		</div>
-
 		
 	</main>
 
