@@ -1,0 +1,50 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Pagetitle from '../components/Pagetitle.astro';
+---
+
+
+<Layout title="Home">
+
+    <main>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="px-5 py-5 w-75 m-auto">
+                <Pagetitle
+                title="Accedi con la tua mail"
+                />
+
+                <div class="mb-4">
+                  <label for="exampleFormControlInput1" class="form-label">Inserisci la tua mail*</label>
+                  <input type="email" class="form-control" id="exampleFormControlInput1">
+                </div>
+
+                <div class="alert alert-light mb-4" role="alert">
+                  <strong>Accesso Rapido</strong><br>Ti manderemo un codice per la login senza necessità di inserire la password. Se invece preferisci, puoi <a href="">accedere con la password</a>.
+                </div>
+
+                <a class="btn btn-primary mb-4" role="button" aria-disabled="true">Accedi con la mail</a>
+
+                <p>Non hai un account? <a href="">Registrati ora</a></p>
+
+              </div>
+            </div>
+            <div class="col-md-6">
+              <img src="https://salonemilano.my.site.com/identity/resource/1681233057000/SDM/assets/home_salesforce.jpg" alt="">
+
+            </div>
+            </div>
+          </div>
+        </div>
+
+    </main>
+</Layout>
+
+
+
+<style>
+  main {
+    padding-top: 72px;
+}
+</style>
