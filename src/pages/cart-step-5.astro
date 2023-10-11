@@ -6,21 +6,21 @@ import Pagetitle from "../components/Pagetitle.astro";
 import Sectiontitle from "../components/Sectiontitle.astro";
 ---
 
-<Layout title="Riepilogo">
+<Layout title="Assegna biglietti">
   <main>
     <div class="container">
       <div class="row">
         <div class="col-md-8">
           <Pagetitle
-            href="/cart-step-3/"
+            href="/cart-step-4/"
             link="torna indietro"
             title="Intesta i biglietti del Salone del Mobile"
             subtitle="lorem"
           />
 
-          <h3 class="fw-bold">Biglietto 1 di 2</h3>
+          <h3 class="fw-bold">Biglietto 2 di 2</h3>
           <div class="mb-0">
-            <strong>Tipologia:</strong> Operatore | <strong>Taglio:</strong> 3
+            <strong>Tipologia:</strong> Operatore | <strong>Taglio:</strong> 1
             giorni <button type="button" class="btn btn-link"
               >Cambia taglio biglietto</button>
           </div>
@@ -215,7 +215,7 @@ import Sectiontitle from "../components/Sectiontitle.astro";
                 />
                 <label
                   class="btn btn-outline-secondary w-100"
-                  for="btn-check-18">19 aprile</label
+                  for="btn-check-19">19 aprile</label
                 >
               </div>
             </div>
@@ -349,15 +349,8 @@ import Sectiontitle from "../components/Sectiontitle.astro";
         </div>
         
 
-        <div class="col-md-4 d-none d-md-block">
-          <div class="bg-lightgrey shadow-sm p-4">
-            <p>Il tuo carrello</p>
-            <Cart />
-            <a href="/cart-step-4/" class="btn btn-primary"
-              >Procedi e intesta il prossimo biglietto</a
-            >
-          </div>
-        </div>
+        <Cart CtaText="Procedi" CtaUrl="/cart-step-6-recap/" />
+
       </div>
     </div>
   </main>
@@ -401,7 +394,7 @@ import Sectiontitle from "../components/Sectiontitle.astro";
   });
 
   // Get the "Procedi" button element
-  const proceedButton = document.querySelector('a[href="/cart-step-4/"]');
+  const proceedButton = document.querySelector('.cta-cart-proceed');
 
   // Add click event listener to the "Procedi" button
   proceedButton.addEventListener("click", function (event) {
