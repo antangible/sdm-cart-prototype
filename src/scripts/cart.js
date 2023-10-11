@@ -81,6 +81,7 @@ function updateCart() {
   const cartTotal = document.getElementById('cart-total');
   const cart = JSON.parse(localStorage.getItem('cart')) || {};
   let total = 0;
+  let totalItems = 0;  // Inizializza la variabile per la somma totale degli articoli
 
   // Cancella il contenuto di "cart-items"
   cartList.innerHTML = '';
@@ -89,6 +90,7 @@ function updateCart() {
   for (const productName in cart) {
     const item = cart[productName];
     total += item.price * item.quantity;
+    totalItems += item.quantity;  // Incrementa la variabile con la quantità di ogni prodotto
 
     if (item.quantity > 0) {
         const listItem = document.createElement('li');
@@ -112,7 +114,10 @@ function updateCart() {
 
         cartList.appendChild(listItem);
     }
-}
+  }
+  
+  const totalItemsDisplay = document.getElementById('total-items'); // Seleziona l'elemento che mostra la somma totale degli articoli
+  totalItemsDisplay.textContent = `${totalItems} articoli`; // Aggiorna l'elemento con il nuovo valore
 
   // Aggiorna il totale del carrello
   cartTotal.textContent = `${total.toFixed(2)}`;

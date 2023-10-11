@@ -7,24 +7,44 @@ interface Props {
 const { CtaText, CtaUrl } = Astro.props;
 ---
 
-<div class="col-md-4 d-none d-md-block">
-	<div class="bg-lightgrey shadow-sm p-4 sticky-top" style="top: 80px;">
-		<p>Il tuo carrello</p>
+<div class="cart col-lg-4">
+	<div class="bg-lightgrey shadow p-4 sticky-top" style="top: 80px;">
 
-		<div class="cart">
+		<div class="d-flex justify-content-between">
+			<span id="total-items"></span>
+			<span class="cart-total fs-5 fw-bold"><span id="cart-total">0.00</span>€</span>
+		</div>
+
+		<!-- <div> -->
 			<ul id="cart-items" class="cart-items">
 				<!-- Elementi del carrello saranno aggiunti qui -->
 			</ul>
-			<p class="fs-5 fw-bold">Totale: € <span id="cart-total">0.00</span></p>
-		</div>
+		<!-- </div> -->
 
 		<a href={CtaUrl} class="btn btn-primary cta-cart-proceed">{CtaText}</a>
 	</div>
 </div>
 
 <style lang="scss" is:global>
-  .cart-items {
+
+	.cart {
+		@media screen and (max-width: 992px) {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			z-index: 1000;
+			background-color: #fff;
+			padding: 0;
+		}
+
+	}
+	.cart-items {
 		list-style: none;
+		padding: 0;
+		@media screen and (max-width: 992px) {
+			display: none;
+		}
 	}
 	.cart-item + .cart-item {
 		margin-top: 8px;
@@ -35,6 +55,12 @@ const { CtaText, CtaUrl } = Astro.props;
 		padding-block: 8px;
 		.quantity, .item-total, .category-name {
 			font-weight: bold;
+		}
+	}
+
+	.cart-total {
+		@media screen and (max-width: 992px) {
+			text-align: right;
 		}
 	}
 </style>
