@@ -1,242 +1,365 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Product from '../components/Product.astro';
-import Cart from '../components/Cart.astro';
-import Pagetitle from '../components/Pagetitle.astro';
-import Sectiontitle from '../components/Pagetitle.astro';
+import Layout from "../layouts/Layout.astro";
+import Product from "../components/Product.astro";
+import Cart from "../components/Cart.astro";
+import Pagetitle from "../components/Pagetitle.astro";
+import Sectiontitle from "../components/Sectiontitle.astro";
 ---
 
 <Layout title="SdM Fake cart">
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <Pagetitle
+            href="/cart-step-3/"
+            link="torna indietro"
+            title="Intesta i biglietti del Salone del Mobile"
+            subtitle="lorem"
+          />
 
-	<main>
-
-		<div class="container">
-			<div class="row">
-			  <div class="col-md-8">
-
-				<Pagetitle
-				href="/cart-step-3/"
-				link="torna indietro"
-				title="Intesta i biglietti del Salone del Mobile"
-				subtitle="lorem"
-				/>
-
-				<h3 class="fw-bold">Biglietto 1 di 2</h3>
-				<div class="mb-0"><strong>Tipologia:</strong> Operatore | <strong>Taglio:</strong> 3 giorni <button type="button" class="btn btn-link">Cambia taglio biglietto</button></div>
-				
-        <!-- Dati intestatario -->
-       
-        <div class="border-top pt-4 mt-4 d-md-flex justify-content-between">
-          <div>
-            <Sectiontitle
-              icon="fa-solid fa-check"
-              title="Section title"
-              subtitle="Section subtitle"
-              />
-            <h5 class="mb-0"><strong>Dati intestatario</strong></h5>
-            <p>Puo usare i dati del tuo account per intestare a te stesso questo biglietto</p>
+          <h3 class="fw-bold">Biglietto 1 di 2</h3>
+          <div class="mb-0">
+            <strong>Tipologia:</strong> Operatore | <strong>Taglio:</strong> 3
+            giorni <button type="button" class="btn btn-link"
+              >Cambia taglio biglietto</button>
           </div>
-          <div class="form-check form-switch py-2">
-            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked">
-            <label class="form-check-label" for="flexSwitchCheckDefault">Usa i miei dati</label>
+
+          <!-- Dati intestatario -->
+
+          <div class="border-top pt-4 mt-4 d-md-flex justify-content-between">
+            <div>
+              <Sectiontitle
+                icon="fa-solid fa-check"
+                title="Section title"
+                subtitle="Section subtitle"
+              />
+              <h5 class="mb-0"><strong>Dati intestatario</strong></h5>
+              <p>
+                Puo usare i dati del tuo account per intestare a te stesso
+                questo biglietto
+              </p>
+            </div>
+            <div class="form-check form-switch py-2">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                role="switch"
+                id="flexSwitchCheckChecked"
+              />
+              <label class="form-check-label" for="flexSwitchCheckDefault"
+                >Usa i miei dati</label
+              >
+            </div>
+          </div>
+
+          <form id="dati-intestatario">
+            <div class="row g-3 pb-3">
+              <div class="col-md-6">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Nome*</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Cognome*</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                />
+              </div>
+            </div>
+            <div class="row g-3 pb-3">
+              <div class="col-md-6">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Email*</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Telefono</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                />
+              </div>
+            </div>
+            <div class="row g-3 pb-3">
+              <div class="col-md-6">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Nazione*</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Provincia*</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                />
+              </div>
+            </div>
+            <div class="row g-3 pb-3">
+              <div class="col-md-6">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Città*</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Cap*</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                />
+              </div>
+            </div>
+          </form>
+
+          <!-- seleziona date -->
+
+          <div class="border-top pt-4 mt-4">
+            <h5 class="mb-0"><strong>Seleziona le date</strong></h5>
+            <p>Puoi selezionare al massimo 3 date</p>
+            <div class="py-4 d-md-flex">
+              <div class="w-100 pe-md-4 pb-4">
+                <input
+                  type="checkbox"
+                  class="btn-check"
+                  id="btn-check-14"
+                  autocomplete="off"
+                />
+                <label
+                  class="btn btn-outline-secondary w-100"
+                  for="btn-check-14">14 aprile</label
+                >
+              </div>
+              <div class="w-100 pe-md-4 pb-4">
+                <input
+                  type="checkbox"
+                  class="btn-check"
+                  id="btn-check-15"
+                  autocomplete="off"
+                />
+                <label
+                  class="btn btn-outline-secondary w-100"
+                  for="btn-check-15">15 aprile</label
+                >
+              </div>
+              <div class="w-100 pe-md-4 pb-4">
+                <input
+                  type="checkbox"
+                  class="btn-check"
+                  id="btn-check-16"
+                  autocomplete="off"
+                />
+                <label
+                  class="btn btn-outline-secondary w-100"
+                  for="btn-check-16">16 aprile</label
+                >
+              </div>
+              <div class="w-100 pe-md-4 pb-4">
+                <input
+                  type="checkbox"
+                  class="btn-check"
+                  id="btn-check-17"
+                  autocomplete="off"
+                />
+                <label
+                  class="btn btn-outline-secondary w-100"
+                  for="btn-check-17">17 aprile</label
+                >
+              </div>
+              <div class="w-100 pe-md-4 pb-4">
+                <input
+                  type="checkbox"
+                  class="btn-check"
+                  id="btn-check-18"
+                  autocomplete="off"
+                />
+                <label
+                  class="btn btn-outline-secondary w-100"
+                  for="btn-check-18">18 aprile</label
+                >
+              </div>
+              <div class="w-100">
+                <input
+                  type="checkbox"
+                  class="btn-check"
+                  id="btn-check-19"
+                  autocomplete="off"
+                />
+                <label
+                  class="btn btn-outline-secondary w-100"
+                  for="btn-check-18">19 aprile</label
+                >
+              </div>
+            </div>
+
+            <div id="message"></div>
+          </div>
+
+          <!-- cross sell -->
+
+          <div
+            id="cross-sell-catalogo"
+            class="border-top pt-4 mt-4 d-md-flex justify-content-between"
+          >
+            <div>
+              <h5 class="mb-0"><strong>Ritira catalogo in fiera</strong></h5>
+              <p>quanti cataloghi verranno ritirati da [te]?</p>
+            </div>
+            <div class="d-flex justify-content-between">
+              <p class="pe-4 mb-0 pt-2">
+                <span class="fw-bold" id="quantita-cataloghi">[4]</span>
+                cataloghi da assegnare
+              </p>
+              <div class="quantity">
+                <button class="remove-quantity btn btn-secondary" disabled=""
+                  >-</button
+                ><span class="product-quantity px-3">0</span><button
+                  class="add-quantity btn btn-secondary">+</button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            id="cross-sell-biglietti-atm"
+            class="border-top pt-4 mt-4 d-md-flex justify-content-between"
+          >
+            <div>
+              <h5 class="mb-0"><strong>Assegna biglietti Atm</strong></h5>
+              <p>quanti biglietti sono intestati a [te]??</p>
+            </div>
+            <div class="d-flex justify-content-between">
+              <p class="pe-4 mb-0 pt-2">
+                <span class="fw-bold" id="quantita-cataloghi">[4]</span>
+                biglietti da assegnare
+              </p>
+              <div class="quantity">
+                <button class="remove-quantity btn btn-secondary" disabled=""
+                  >-</button
+                ><span class="product-quantity px-3">0</span><button
+                  class="add-quantity btn btn-secondary">+</button>
+              </div>
+            </div>
           </div>
         </div>
 
-        <form id="dati-intestatario">
-          <div class="row g-3 pb-3">
-            <div class="col-md-6">
-              <label for="exampleFormControlInput1" class="form-label">Nome*</label>
-              <input type="email" class="form-control" id="exampleFormControlInput1">
-            </div>
-            <div class="col-md-6">
-              <label for="exampleFormControlInput1" class="form-label">Cognome*</label>
-              <input type="email" class="form-control" id="exampleFormControlInput1">
-            </div>
+        <div class="col-md-4 d-none d-md-block">
+          <div class="bg-lightgrey shadow-sm p-4">
+            <p>Il tuo carrello</p>
+            <Cart />
+            <a href="/cart-step-4/" class="btn btn-primary"
+              >Procedi e intesta il prossimo biglietto</a
+            >
           </div>
-          <div class="row g-3 pb-3">
-            <div class="col-md-6">
-              <label for="exampleFormControlInput1" class="form-label">Email*</label>
-              <input type="email" class="form-control" id="exampleFormControlInput1">
-            </div>
-            <div class="col-md-6">
-              <label for="exampleFormControlInput1" class="form-label">Telefono</label>
-              <input type="email" class="form-control" id="exampleFormControlInput1">
-            </div>
-          </div>
-          <div class="row g-3 pb-3">
-            <div class="col-md-6">
-              <label for="exampleFormControlInput1" class="form-label">Nazione*</label>
-              <input type="email" class="form-control" id="exampleFormControlInput1">
-            </div>
-            <div class="col-md-6">
-              <label for="exampleFormControlInput1" class="form-label">Provincia*</label>
-              <input type="email" class="form-control" id="exampleFormControlInput1">
-            </div>
-          </div>
-          <div class="row g-3 pb-3">
-            <div class="col-md-6">
-              <label for="exampleFormControlInput1" class="form-label">Città*</label>
-              <input type="email" class="form-control" id="exampleFormControlInput1">
-            </div>
-            <div class="col-md-6">
-              <label for="exampleFormControlInput1" class="form-label">Cap*</label>
-              <input type="email" class="form-control" id="exampleFormControlInput1">
-            </div>
-          </div>
-        </form>
-
-				<!-- seleziona date -->
-
-				<div class="border-top pt-4 mt-4">
-					<h5 class="mb-0"><strong>Seleziona le date</strong></h5>
-					<p>Puoi selezionare al massimo 3 date</p>
-					<div class="py-4 d-md-flex">
-						<div class="w-100 pe-md-4 pb-4">
-							<input type="checkbox" class="btn-check" id="btn-check-14" autocomplete="off">
-							<label class="btn btn-outline-secondary w-100" for="btn-check-14">14 aprile</label>
-						</div>
-						<div class="w-100 pe-md-4 pb-4">
-							<input type="checkbox" class="btn-check" id="btn-check-15" autocomplete="off">
-							<label class="btn btn-outline-secondary w-100" for="btn-check-15">15 aprile</label>
-						</div>
-						<div class="w-100 pe-md-4 pb-4">
-							<input type="checkbox" class="btn-check" id="btn-check-16" autocomplete="off">
-							<label class="btn btn-outline-secondary w-100" for="btn-check-16">16 aprile</label>
-						</div>
-						<div class="w-100 pe-md-4 pb-4">
-							<input type="checkbox" class="btn-check" id="btn-check-17" autocomplete="off">
-							<label class="btn btn-outline-secondary w-100" for="btn-check-17">17 aprile</label>
-						</div>
-						<div class="w-100 pe-md-4 pb-4">
-							<input type="checkbox" class="btn-check" id="btn-check-18" autocomplete="off">
-							<label class="btn btn-outline-secondary w-100" for="btn-check-18">18 aprile</label>
-						</div>
-						<div class="w-100">
-							<input type="checkbox" class="btn-check" id="btn-check-19" autocomplete="off">
-							<label class="btn btn-outline-secondary w-100" for="btn-check-18">19 aprile</label>
-						</div>
-					</div>
-
-					<div id="message"></div>
-
-				</div>
-
-				<!-- cross sell -->
-				
-				<div id="cross-sell-catalogo" class="border-top pt-4 mt-4 d-md-flex justify-content-between">
-					<div>
-						<h5 class="mb-0"><strong>Ritira catalogo in fiera</strong></h5>
-						<p>quanti cataloghi verranno ritirati da [te]?</p>
-					</div>
-					<div class="d-flex justify-content-between">
-						<p class="pe-4 mb-0 pt-2"><span class="fw-bold" id="quantita-cataloghi">[4]</span> cataloghi da assegnare</p>
-						<div class="quantity"><button class="remove-quantity btn btn-secondary" disabled="">-</button><span class="product-quantity px-3">0</span><button class="add-quantity btn btn-secondary">+</button></div>
-					</div>
-				</div>
-
-				<div id="cross-sell-biglietti-atm" class="border-top pt-4 mt-4 d-md-flex justify-content-between">
-					<div>
-						<h5 class="mb-0"><strong>Assegna biglietti Atm</strong></h5>
-						<p>quanti biglietti sono intestati a [te]??</p>
-					</div>
-					<div class="d-flex justify-content-between">
-						<p class="pe-4 mb-0 pt-2"><span class="fw-bold" id="quantita-cataloghi">[4]</span>  biglietti da assegnare</p>
-						<div class="quantity"><button class="remove-quantity btn btn-secondary" disabled="">-</button><span class="product-quantity px-3">0</span><button class="add-quantity btn btn-secondary">+</button></div>
-					</div>
-				</div>
-
-			  </div>
-
-			  <div class="col-md-4 d-none d-md-block">
-				<div class="bg-lightgrey shadow-sm p-4">
-					<p>Il tuo carrello</p>
-					<Cart />
-					<a href="/cart-step-4/" class="btn btn-primary">Procedi e intesta il prossimo biglietto</a>
-				</div>
-				</div>
-		  	</div>
-		</div>
-
-	</main>
-
+        </div>
+      </div>
+    </div>
+  </main>
 </Layout>
 
-<style>
-
-</style>
-
+<style></style>
 
 <div id="message" class="alert alert-warning d-none" role="alert"></div>
 
 <script>
-    // Ottieni tutti gli elementi checkbox con la classe 'btn-check'
-    const checkboxes = document.querySelectorAll('.btn-check');
+  // Ottieni tutti gli elementi checkbox con la classe 'btn-check'
+  const checkboxes = document.querySelectorAll(".btn-check");
 
-    // Aggiungi un ascoltatore di eventi a ciascun checkbox
-    checkboxes.forEach(checkbox => {
-        checkbox.addEventListener('change', function() {
-            // Conta quante checkbox sono selezionate
-            const selectedCheckboxes = document.querySelectorAll('.btn-check:checked');
-            
-            // Ottieni il div del messaggio
-            const messageDiv = document.getElementById('message');
-            
-            // Mostra un messaggio se sono selezionate più di 3 date
-            if (selectedCheckboxes.length > 3) {
-                messageDiv.innerHTML = "Puoi selezionare al massimo 3 date.";
-                // Aggiungi classi e attributo role al div
-                messageDiv.classList.remove('d-none');
-                messageDiv.classList.add('alert', 'alert-warning');
-                messageDiv.setAttribute('role', 'alert');
-                // Disabilita la checkbox appena selezionata
-                this.checked = false;
-            } else {
-                messageDiv.innerHTML = ""; // Cancella il messaggio se le selezioni sono valide
-                // Rimuovi classi e attributo role dal div
-                messageDiv.classList.add('d-none');
-                messageDiv.classList.remove('alert', 'alert-warning');
-                messageDiv.removeAttribute('role');
-            }
-        });
+  // Aggiungi un ascoltatore di eventi a ciascun checkbox
+  checkboxes.forEach((checkbox) => {
+    checkbox.addEventListener("change", function () {
+      // Conta quante checkbox sono selezionate
+      const selectedCheckboxes =
+        document.querySelectorAll(".btn-check:checked");
+
+      // Ottieni il div del messaggio
+      const messageDiv = document.getElementById("message");
+
+      // Mostra un messaggio se sono selezionate più di 3 date
+      if (selectedCheckboxes.length > 3) {
+        messageDiv.innerHTML = "Puoi selezionare al massimo 3 date.";
+        // Aggiungi classi e attributo role al div
+        messageDiv.classList.remove("d-none");
+        messageDiv.classList.add("alert", "alert-warning");
+        messageDiv.setAttribute("role", "alert");
+        // Disabilita la checkbox appena selezionata
+        this.checked = false;
+      } else {
+        messageDiv.innerHTML = ""; // Cancella il messaggio se le selezioni sono valide
+        // Rimuovi classi e attributo role dal div
+        messageDiv.classList.add("d-none");
+        messageDiv.classList.remove("alert", "alert-warning");
+        messageDiv.removeAttribute("role");
+      }
     });
+  });
 
-    // Get the "Procedi" button element
-const proceedButton = document.querySelector('a[href="/cart-step-4/"]');
+  // Get the "Procedi" button element
+  const proceedButton = document.querySelector('a[href="/cart-step-4/"]');
 
-// Add click event listener to the "Procedi" button
-proceedButton.addEventListener('click', function(event) {
-    const selectedCheckboxes = document.querySelectorAll('.btn-check:checked');
-    
+  // Add click event listener to the "Procedi" button
+  proceedButton.addEventListener("click", function (event) {
+    const selectedCheckboxes = document.querySelectorAll(".btn-check:checked");
+
     // If the number of selected dates is not equal to three
     if (selectedCheckboxes.length !== 3) {
-        event.preventDefault(); // Stop the navigation to the next page
-        const messageDiv = document.getElementById('message');
-        
-        messageDiv.innerHTML = "Attenzione, non hai selezionato le 3 date previste dal tuo biglietto.";
-        // Add classes and attribute role to the div
-        messageDiv.classList.remove('d-none');
-        messageDiv.classList.add('alert', 'alert-warning');
-        messageDiv.setAttribute('role', 'alert');
+      event.preventDefault(); // Stop the navigation to the next page
+      const messageDiv = document.getElementById("message");
+
+      messageDiv.innerHTML =
+        "Attenzione, non hai selezionato le 3 date previste dal tuo biglietto.";
+      // Add classes and attribute role to the div
+      messageDiv.classList.remove("d-none");
+      messageDiv.classList.add("alert", "alert-warning");
+      messageDiv.setAttribute("role", "alert");
     }
-});
+  });
 
+  // Mostra nascondi form dati intestatario
 
-// Mostra nascondi form dati intestatario
+  // Grab the switch (checkbox) element
+  const switchElement = document.getElementById("flexSwitchCheckChecked");
 
+  // Grab the form element
+  const formElement = document.getElementById("dati-intestatario");
 
-// Grab the switch (checkbox) element
-const switchElement = document.getElementById('flexSwitchCheckChecked');
-
-// Grab the form element
-const formElement = document.getElementById('dati-intestatario');
-
-// Add an event listener to toggle the visibility of the form on checkbox change
-switchElement.addEventListener('change', function() {
+  // Add an event listener to toggle the visibility of the form on checkbox change
+  switchElement.addEventListener("change", function () {
     if (this.checked) {
-        formElement.style.display = 'none';
+      formElement.style.display = "none";
     } else {
-        formElement.style.display = 'block';
+      formElement.style.display = "block";
     }
-});
-
+  });
 </script>
