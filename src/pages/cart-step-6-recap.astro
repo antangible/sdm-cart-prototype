@@ -1,0 +1,79 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Product from "../components/Product.astro";
+import Cart from "../components/Cart.astro";
+import Pagetitle from "../components/Pagetitle.astro";
+import Sectiontitle from "../components/Sectiontitle.astro";
+import Recapitem from "../components/Recapitem.astro";
+---
+
+<Layout title="Assegna biglietti">
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <Pagetitle
+            href="/cart-step-4/"
+            link="torna indietro"
+            title="Riepilogo"
+            subtitle="lorem"
+          />
+
+
+          <Recapitem
+          name="Andrea Acerbi"
+          tipo="Biglietto Operatore"
+          taglio="3 giorni"
+          />
+
+          <Recapitem
+          name="Marianna Roma"
+          tipo="Biglietto Operatore"
+          taglio="1 giorno"
+          />
+
+          <Recapitem
+          name="Manuele Matera"
+          tipo="Biglietto Operatore"
+          taglio="6 giorni"
+          />
+       
+
+          <!-- Gestione dei consensi -->
+
+          <div id="consensi" class="mt-4">
+
+            <div class="pt-3">
+              <p>Ai sensi e per gli effetti di cui agli articoli 1341 e 1342 del codice civile, l’utente dichiara espressamente di approvare le seguenti disposizioni del regolamento per l’acquisto di beni e servizi: art. 1 (oggetto del servizio), art. 2 (corrispettivo del servizio), art 3. (obblighi dell’acquirente e del titolare della carta di credito e dei wallet digitali), art 5 (manifestazione annullata o annullamento dei titoli di accesso), art 6 (diritto di recesso), art 7 (limitazioni di responsabilità).</p>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Accetto
+                </label>
+              </div>
+            </div>
+
+            <div class="pt-3">
+              <p>Ai sensi e per gli effetti di cui agli articoli 1341 e 1342 del codice civile, l’utente dichiara espressamente di approvare le seguenti disposizioni del regolamento per l’acquisto di beni e servizi: art. 1 (oggetto del servizio), art. 2 (corrispettivo del servizio), art 3. (obblighi dell’acquirente e del titolare della carta di credito e dei wallet digitali), art 5 (manifestazione annullata o annullamento dei titoli di accesso), art 6 (diritto di recesso), art 7 (limitazioni di responsabilità).</p>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Accetto
+                </label>
+              </div>
+            </div>
+
+          </div>
+
+        </div>  
+
+        <Cart CtaText="Procedi e intesta il prossimo biglietto" CtaUrl="/cart-step-4/" />
+
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style></style>
+
+<div id="message" class="alert alert-warning d-none" role="alert"></div>

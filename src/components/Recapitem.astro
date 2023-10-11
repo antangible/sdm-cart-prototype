@@ -1,0 +1,43 @@
+---
+import { string } from 'astro/zod';
+interface Props {
+	name: string;
+  tipo: string;
+  taglio: string;
+
+}
+
+const { name, tipo, taglio } = Astro.props;
+---
+
+<div class="bg-light p-4 d-md-flex justify-content-between mb-4">
+  <p class="fw-bold fs-5 w-md-25 mb-0">{name}</p>
+  <ul class="text-secondary">
+    <li><i class="fa-solid fa-ticket"></i><span class="ps-2">{tipo}</span></li>
+    <li><i class="fa-regular fa-calendar"></i><span class="ps-2">{taglio}</span></li>
+  </ul>
+  <p class="d-md-none fw-bold text-secondary">Altri acquisti</p>
+  <ul class="text-secondary">
+    <li><i class="fa-solid fa-book"></i><span class="ps-2">1 catalogo 2024</span></li>
+    <li><i class="fa-solid fa-train"></i><span class="ps-2">1 biglietto ordinario</span></li>
+  </ul>
+
+  <div>
+    <button type="button" class="btn btn-outline-secondary btn-sm"><i class="fa-solid fa-pen-to-square"></i> Modfica dati </button>
+  </div>
+</div>
+
+
+<style>
+  ol, ul {
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 0;
+  }
+
+  li {
+    padding-bottom: 8px;
+  }
+
+</style>
+
