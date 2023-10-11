@@ -1,11 +1,25 @@
 ---
+interface Props {
+	CtaText: string;
+	CtaUrl?: string;
+}
 
+const { CtaText, CtaUrl } = Astro.props;
 ---
-<div class="cart sticky-top">
-	<ul id="cart-items" class="cart-items">
-		<!-- Elementi del carrello saranno aggiunti qui -->
-	</ul>
-	<p class="fs-5 fw-bold">Totale: € <span id="cart-total">0.00</span></p>
+
+<div class="col-md-4 d-none d-md-block">
+	<div class="bg-lightgrey shadow-sm p-4 sticky-top" style="top: 80px;">
+		<p>Il tuo carrello</p>
+
+		<div class="cart">
+			<ul id="cart-items" class="cart-items">
+				<!-- Elementi del carrello saranno aggiunti qui -->
+			</ul>
+			<p class="fs-5 fw-bold">Totale: € <span id="cart-total">0.00</span></p>
+		</div>
+
+		<a href={CtaUrl} class="btn btn-primary cta-cart-proceed">{CtaText}</a>
+	</div>
 </div>
 
 <style lang="scss" is:global>

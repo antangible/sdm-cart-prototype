@@ -1,52 +1,42 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Product from '../components/Product.astro';
-import Cart from '../components/Cart.astro';
-import Pagetitle from '../components/Pagetitle.astro';
+import Layout from "../layouts/Layout.astro";
+import Product from "../components/Product.astro";
+import Cart from "../components/Cart.astro";
+import Pagetitle from "../components/Pagetitle.astro";
 ---
 
 <Layout title="Acquisto catalogo">
 
 	<main>
-
 		<div class="container">
 			<div class="row">
-			  <div class="col-md-8">
+				<div class="col-md-8">
+					<Pagetitle
+						href="/cart-step-1/"
+						link="torna indietro"
+						title="Vuoi acquistare il catalogo della fiera?"
+						subtitle="Puoi acquistarlo ora e ritirarlo di persona quando accederai al Salone del Mobile. Riceverai via mail il voucher per il ritiro del catalogo in fiera."
+					/>
 
-				<Pagetitle
-				href="/cart-step-1/"
-				link="torna indietro"
-				title="Vuoi acquistare il catalogo della fiera?"
-				subtitle="Puoi acquistarlo ora e ritirarlo di persona quando accederai al Salone del Mobile. Riceverai via mail il voucher per il ritiro del catalogo in fiera."
-				/>
-				
-				<div class="products container">
-					<div class="row my-3">
-						<div class="col p-0">
-							<Product
-								id="Catalogo Saloni 2024"
-								title="Catalogo Saloni 2024"
-								price={25}
-								body="Catalogo cartaceo da ritirare in fiera"
-							/>
+					<div class="products container">
+						<div class="row my-3">
+							<div class="col p-0">
+								<Product
+									id="Catalogo Saloni 2024"
+									title="Catalogo Saloni 2024"
+									price={25}
+									body="Catalogo cartaceo da ritirare in fiera"
+								/>
+							</div>
 						</div>
 					</div>
 				</div>
-			  </div>
-			  <div class="col-md-4 d-none d-md-block">
-				<div class="bg-lightgrey shadow-sm p-4">
-					<p>Il tuo carrello</p>
-					<Cart />
-					<a href="/cart-step-3/" class="btn btn-primary">Procedi</a>
-				</div>
-				</div>
-		  	</div>
+				
+				<Cart CtaText="Procedi" CtaUrl="/cart-step-3/" />
+				
+			</div>
 		</div>
-		
 	</main>
-
 </Layout>
 
-<style>
-
-</style>
+<style></style>

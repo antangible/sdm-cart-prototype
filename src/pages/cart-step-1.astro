@@ -57,13 +57,9 @@ import Pagetitle from "../components/Pagetitle.astro";
             Il carrello è vuoto. Aggiungi almeno un prodotto prima di procedere.
           </div>
         </div>
-        <div class="col-md-4 d-none d-md-block">
-          <div class="bg-lightgrey shadow-sm p-4">
-            <p>Il tuo carrello</p>
-            <Cart />
-            <a href="/cart-step-2/" class="btn btn-primary">Procedi</a>
-          </div>
-        </div>
+
+        <Cart CtaText="Procedi" CtaUrl="/cart-step-2/" />
+
       </div>
     </div>
   </main>
