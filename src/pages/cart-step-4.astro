@@ -6,7 +6,7 @@ import Pagetitle from "../components/Pagetitle.astro";
 import Sectiontitle from "../components/Sectiontitle.astro";
 ---
 
-<Layout title="SdM Fake cart">
+<Layout title="Assegna biglietti">
   <main>
     <div class="container">
       <div class="row">
@@ -28,18 +28,11 @@ import Sectiontitle from "../components/Sectiontitle.astro";
           <!-- Dati intestatario -->
 
           <div class="border-top pt-4 mt-4 d-md-flex justify-content-between">
-            <div>
-              <Sectiontitle
+            <Sectiontitle
                 icon="fa-solid fa-check"
-                title="Section title"
-                subtitle="Section subtitle"
+                title="Dati intestatario"
+                subtitle="Puo usare i dati del tuo account per intestare a te stesso questo biglietto"
               />
-              <h5 class="mb-0"><strong>Dati intestatario</strong></h5>
-              <p>
-                Puo usare i dati del tuo account per intestare a te stesso
-                questo biglietto
-              </p>
-            </div>
             <div class="form-check form-switch py-2">
               <input
                 class="form-check-input"
@@ -53,7 +46,7 @@ import Sectiontitle from "../components/Sectiontitle.astro";
             </div>
           </div>
 
-          <form id="dati-intestatario">
+          <form class="ps-md-4" id="dati-intestatario">
             <div class="row g-3 pb-3">
               <div class="col-md-6">
                 <label for="exampleFormControlInput1" class="form-label"
@@ -147,9 +140,12 @@ import Sectiontitle from "../components/Sectiontitle.astro";
           <!-- seleziona date -->
 
           <div class="border-top pt-4 mt-4">
-            <h5 class="mb-0"><strong>Seleziona le date</strong></h5>
-            <p>Puoi selezionare al massimo 3 date</p>
-            <div class="py-4 d-md-flex">
+            <Sectiontitle
+            icon="fa-solid fa-check"
+            title="Seleziona le date"
+            subtitle="Puoi selezionare al massimo 3 date"
+            />
+            <div class="ps-md-4 pt-4 d-md-flex">
               <div class="w-100 pe-md-4 pb-4">
                 <input
                   type="checkbox"
@@ -233,9 +229,17 @@ import Sectiontitle from "../components/Sectiontitle.astro";
             id="cross-sell-catalogo"
             class="border-top pt-4 mt-4 d-md-flex justify-content-between"
           >
+
+          
             <div>
-              <h5 class="mb-0"><strong>Ritira catalogo in fiera</strong></h5>
-              <p>quanti cataloghi verranno ritirati da [te]?</p>
+
+            <Sectiontitle
+            icon="fa-solid fa-check"
+            title="Ritira catalogo in fiera"
+            subtitle="quanti cataloghi verranno ritirati da [te]?"
+            />
+
+          
             </div>
             <div class="d-flex justify-content-between">
               <p class="pe-4 mb-0 pt-2">
@@ -256,8 +260,13 @@ import Sectiontitle from "../components/Sectiontitle.astro";
             class="border-top pt-4 mt-4 d-md-flex justify-content-between"
           >
             <div>
-              <h5 class="mb-0"><strong>Assegna biglietti Atm</strong></h5>
-              <p>quanti biglietti sono intestati a [te]??</p>
+
+              <Sectiontitle
+              icon="fa-solid fa-check"
+              title="Assegna biglietti Atm"
+              subtitle="Quanti biglietti sono intestati a [te]?"
+              />
+
             </div>
             <div class="d-flex justify-content-between">
               <p class="pe-4 mb-0 pt-2">
@@ -272,7 +281,73 @@ import Sectiontitle from "../components/Sectiontitle.astro";
               </div>
             </div>
           </div>
+
+             <!-- Gestione dei consensi -->
+
+            <div id="consensi" class="border-top pt-4 mt-4">
+
+              <Sectiontitle
+              icon="fa-solid fa-check"
+              title="Gestione dei consensi"
+              subtitle="quanti cataloghi verranno ritirati da [te]?"
+              />
+
+              <div class="pt-3">
+                <div class="d-flex pe-3">
+                  <p>Confermo di aver visionato e compreso la Privacy Policy – INFORMATIVA PIATTAFORMA ai sensi dell’art. 13 del Regolamento (UE) 2016/679 disponibile al link: https://www.salonemilano.it/it/privacy-policy. *</p>
+                  <div class="form-check pe-3">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Si
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      No
+                    </label>
+                  </div>
+                </div>
+  
+                <div class="d-flex pe-3">
+                  <p>Acconsento al trattamento dei miei dati personali per finalità di profilazione ed analisi di abitudini di consumo da parte di Federlegno Arredo Eventi S.p.A. (Salone del Mobile.Milano) e/o società controllate e /o collegate.</p>
+                  <div class="form-check pe-3">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Si
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      No
+                    </label>
+                  </div>
+                </div>
+  
+                <div class="d-flex pe-3">
+                  <p>Acconsento al trattamento dei miei dati personali per la ricezione di comunicazioni con finalità di marketing per le finalità di invio di comunicazioni di natura istituzionale, commerciale e promozionale, ivi inclusi newsletter ed inviti alle iniziative organizzate da Federlegno Arredo Eventi S.p.A.(Salone del Mobile.Milano) e/o società controllate e /o collegate, sondaggi e ricerche di mercato.</p>
+                  <div class="form-check pe-3">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Si
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      No
+                    </label>
+                  </div>
+                </div>
+
+              </div>
+
+              
+
+            </div>
         </div>
+        
 
         <div class="col-md-4 d-none d-md-block">
           <div class="bg-lightgrey shadow-sm p-4">
