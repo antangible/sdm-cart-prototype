@@ -18,37 +18,11 @@ import Sectiontitle from "../components/Sectiontitle.astro";
             subtitle="lorem"
           />
 
-	<main>
-
-		<div class="container">
-			<div class="row">
-			  <div class="col-md-8">
-
-				<Pagetitle
-				href="/cart-step-3/"
-				link="torna indietro"
-				title="Intesta i biglietti del Salone del Mobile"
-				subtitle="lorem"
-				/>
-
-				<h3 class="fw-bold">Biglietto 1 di 2</h3>
-				<div class="mb-0"><strong>Tipologia:</strong> Operatore | <strong>Taglio:</strong> 3 giorni <button type="button" class="btn btn-link">Cambia taglio biglietto</button></div>
-				
-        <!-- Dati intestatario -->
-       
-        <div class="border-top pt-4 mt-4 d-md-flex justify-content-between">
-          <div>
-
-            <Sectiontitle
-              icon="fa-solid fa-check"
-              title="Dati intestatario"
-              subtitle="Puo usare i dati del tuo account per intestare a te stesso questo biglietto"
-            />
-
-          </div>
-          <div class="form-check form-switch py-2">
-            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked">
-            <label class="form-check-label" for="flexSwitchCheckDefault">Usa i miei dati</label>
+          <h3 class="fw-bold">Biglietto 1 di 2</h3>
+          <div class="mb-0">
+            <strong>Tipologia:</strong> Operatore | <strong>Taglio:</strong> 3
+            giorni <button type="button" class="btn btn-link"
+              >Cambia taglio biglietto</button>
           </div>
 
           <!-- Dati intestatario -->
@@ -298,92 +272,7 @@ import Sectiontitle from "../components/Sectiontitle.astro";
               </div>
             </div>
           </div>
-        </form>
-
-				<!-- seleziona date -->
-
-				<div class="border-top pt-4 mt-4">
-
-          <Sectiontitle
-              icon="fa-solid fa-check"
-              title="Seleziona le date"
-              subtitle="Puoi selezionare al massimo 3 date"
-            />
-
-					<div class="py-4 d-md-flex">
-						<div class="w-100 pe-md-4 pb-4">
-							<input type="checkbox" class="btn-check" id="btn-check-14" autocomplete="off">
-							<label class="btn btn-outline-secondary w-100" for="btn-check-14">14 aprile</label>
-						</div>
-						<div class="w-100 pe-md-4 pb-4">
-							<input type="checkbox" class="btn-check" id="btn-check-15" autocomplete="off">
-							<label class="btn btn-outline-secondary w-100" for="btn-check-15">15 aprile</label>
-						</div>
-						<div class="w-100 pe-md-4 pb-4">
-							<input type="checkbox" class="btn-check" id="btn-check-16" autocomplete="off">
-							<label class="btn btn-outline-secondary w-100" for="btn-check-16">16 aprile</label>
-						</div>
-						<div class="w-100 pe-md-4 pb-4">
-							<input type="checkbox" class="btn-check" id="btn-check-17" autocomplete="off">
-							<label class="btn btn-outline-secondary w-100" for="btn-check-17">17 aprile</label>
-						</div>
-						<div class="w-100 pe-md-4 pb-4">
-							<input type="checkbox" class="btn-check" id="btn-check-18" autocomplete="off">
-							<label class="btn btn-outline-secondary w-100" for="btn-check-18">18 aprile</label>
-						</div>
-						<div class="w-100">
-							<input type="checkbox" class="btn-check" id="btn-check-19" autocomplete="off">
-							<label class="btn btn-outline-secondary w-100" for="btn-check-18">19 aprile</label>
-						</div>
-					</div>
-
-					<div id="message"></div>
-
-				</div>
-
-				<!-- cross sell -->
-				
-				<div id="cross-sell-catalogo" class="border-top pt-4 mt-4 d-md-flex justify-content-between">
-
-          <Sectiontitle
-            icon="fa-solid fa-check"
-            title="Ritira catalogo in fiera"
-            subtitle="quanti cataloghi verranno ritirati da [te]"
-          />
-          
-					<div class="d-flex justify-content-between">
-						<p class="pe-4 mb-0 pt-2"><span class="fw-bold" id="quantita-cataloghi">[4]</span> cataloghi da assegnare</p>
-						<div class="quantity"><button class="remove-quantity btn btn-secondary" disabled="">-</button><span class="product-quantity px-3">0</span><button class="add-quantity btn btn-secondary">+</button></div>
-					</div>
-				</div>
-
-				<div id="cross-sell-biglietti-atm" class="border-top pt-4 mt-4 d-md-flex justify-content-between">
-
-          <Sectiontitle
-            icon="fa-solid fa-check"
-            title="Assegna biglietti Atm"
-            subtitle="Quanti biglietti sono intestati a [te]?"
-          />
-
-					<div class="d-flex justify-content-between">
-						<p class="pe-4 mb-0 pt-2"><span class="fw-bold" id="quantita-cataloghi">[4]</span>  biglietti da assegnare</p>
-						<div class="quantity"><button class="remove-quantity btn btn-secondary" disabled="">-</button><span class="product-quantity px-3">0</span><button class="add-quantity btn btn-secondary">+</button></div>
-					</div>
-				</div>
-
-			  </div>
-
-			  <div class="col-md-4 d-none d-md-block">
-				<div class="bg-lightgrey shadow-sm p-4">
-					<p>Il tuo carrello</p>
-					<Cart />
-					<a href="/cart-step-4/" class="btn btn-primary">Procedi e intesta il prossimo biglietto</a>
-				</div>
-				</div>
-		  	</div>
-		</div>
-
-	</main>
+        </div>
 
         <div class="col-md-4 d-none d-md-block">
           <div class="bg-lightgrey shadow-sm p-4">
