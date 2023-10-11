@@ -14,8 +14,8 @@ const { icona, link, href, title, subtitle } = Astro.props;
     <i class={icona}></i>
     <a href={href}>{link}</a>
     <div class="pt-4">
-      <h1>{title}</h1>
-      <p class="fs-5">{subtitle}</p>
+      <h1 set:html={title} />
+      <p set:html={subtitle}class="fs-5" />
     </div>
 </div>
 
