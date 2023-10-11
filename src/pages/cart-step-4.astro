@@ -274,15 +274,8 @@ import Sectiontitle from "../components/Sectiontitle.astro";
           </div>
         </div>
 
-        <div class="col-md-4 d-none d-md-block">
-          <div class="bg-lightgrey shadow-sm p-4">
-            <p>Il tuo carrello</p>
-            <Cart />
-            <a href="/cart-step-4/" class="btn btn-primary"
-              >Procedi e intesta il prossimo biglietto</a
-            >
-          </div>
-        </div>
+        <Cart CtaText="Procedi e intesta il prossimo biglietto" CtaUrl="/cart-step-4/" />
+
       </div>
     </div>
   </main>
@@ -326,7 +319,7 @@ import Sectiontitle from "../components/Sectiontitle.astro";
   });
 
   // Get the "Procedi" button element
-  const proceedButton = document.querySelector('a[href="/cart-step-4/"]');
+  const proceedButton = document.querySelector('.cta-cart-proceed');
 
   // Add click event listener to the "Procedi" button
   proceedButton.addEventListener("click", function (event) {
