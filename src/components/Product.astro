@@ -4,12 +4,13 @@ interface Props {
 	body: string;
 	price: number;
 	id: string;
+	category: string;
 }
 
-const { title, body, price, id } = Astro.props;
+const { title, body, price, id, category } = Astro.props;
 ---
 
-<div class="product bg-light p-4 mb-2" data-product={id}>
+<div class="product bg-light p-4 mb-2" data-product={id} data-category={category}>
 	<div class="d-flex justify-content-between">
 		<div>
 			<p class="fs-5 fw-bold mb-0">{title}</p>

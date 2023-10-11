@@ -1,22 +1,19 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Product from '../components/Product.astro';
-import Cart from '../components/Cart.astro';
-import Pagetitle from '../components/Pagetitle.astro';
+import Layout from "../layouts/Layout.astro";
+import Product from "../components/Product.astro";
+import Cart from "../components/Cart.astro";
+import Pagetitle from "../components/Pagetitle.astro";
 ---
 
 <Layout title="SdM Fake cart">
-
-	<main>
-
-		<div class="container">
-			<div class="row">
-			  <div class="col-md-8">
-
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
           <Pagetitle
-          title="Ciao <strong>[Andrea]</strong>, di quanti biglietti hai bisogno?"
+            title="Ciao <strong>[Andrea]</strong>, di quanti biglietti hai bisogno?"
           />
-          
+
           <div class="products container">
             <div class="row my-3">
               <div class="col p-0">
@@ -35,6 +32,7 @@ import Pagetitle from '../components/Pagetitle.astro';
                   title="Biglietto operatore"
                   price={60}
                   body="3 giorni"
+                  category="Categoria 2"
                 />
               </div>
             </div>
@@ -45,88 +43,89 @@ import Pagetitle from '../components/Pagetitle.astro';
                   title="Biglietto operatore"
                   price={73}
                   body="6 giorni"
+                  category="Categoria 3"
                 />
               </div>
             </div>
           </div>
 
-          <div id="alert-message" class="alert alert-danger d-none" role="alert">
+          <div
+            id="alert-message"
+            class="alert alert-danger d-none"
+            role="alert"
+          >
             Il carrello è vuoto. Aggiungi almeno un prodotto prima di procedere.
           </div>
-
-			  </div>
-			  <div class="col-md-4 d-none d-md-block">
-				<div class="bg-lightgrey shadow-sm p-4">
-					<p>Il tuo carrello</p>
-					<Cart />
-					<a href="/cart-step-2/" class="btn btn-primary">Procedi</a>
-				</div>
-				</div>
-		  	</div>
-		</div>
-    		
-	</main>
-
+        </div>
+        <div class="col-md-4 d-none d-md-block">
+          <div class="bg-lightgrey shadow-sm p-4">
+            <p>Il tuo carrello</p>
+            <Cart />
+            <a href="/cart-step-2/" class="btn btn-primary">Procedi</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 </Layout>
 
-<style>
-
-</style>
-
+<style></style>
 
 <script>
-    // Funzione per verificare se il carrello contiene almeno un prodotto
-    function checkCartNotEmpty() {
-        // Ottieni il numero di prodotti nel carrello (puoi personalizzare questa logica)
-        const numberOfProductsInCart = document.querySelectorAll('.cart-item').length;
-        const alertMessage = document.getElementById('alert-message');
-        const proceedButton = document.querySelector('a[href="cart-step-2"]');
-
-        // Verifica se il carrello è vuoto
-        if (numberOfProductsInCart === 0) {
-            // Mostra il messaggio di avviso
-            alertMessage.classList.remove('d-none');
-            // Disabilita il tasto "Procedi"
-            proceedButton.classList.add('disabled');
-            proceedButton.setAttribute('disabled', 'disabled');
-        } else {
-            // Nascondi il messaggio di avviso se ci sono prodotti nel carrello
-            alertMessage.classList.add('d-none');
-            // Abilita il tasto "Procedi"
-            proceedButton.classList.remove('disabled');
-            proceedButton.removeAttribute('disabled');
-        }
-    }
-
-    // Aggiungi un ascoltatore di eventi al link "Procedi"
+  // Funzione per verificare se il carrello contiene almeno un prodotto
+  function checkCartNotEmpty() {
+    // Ottieni il numero di prodotti nel carrello (puoi personalizzare questa logica)
+    const numberOfProductsInCart =
+      document.querySelectorAll(".cart-item").length;
+    const alertMessage = document.getElementById("alert-message");
     const proceedButton = document.querySelector('a[href="cart-step-2"]');
-    if (proceedButton) {
-        proceedButton.addEventListener('click', function(event) {
-            // Verifica se il carrello è vuoto prima di procedere
-            checkCartNotEmpty();
-            
-            // Se il carrello è vuoto, interrompi l'azione predefinita del link
-            if (!document.getElementById('alert-message').classList.contains('d-none')) {
-                event.preventDefault();
-            }
-        });
+
+    // Verifica se il carrello è vuoto
+    if (numberOfProductsInCart === 0) {
+      // Mostra il messaggio di avviso
+      alertMessage.classList.remove("d-none");
+      // Disabilita il tasto "Procedi"
+      proceedButton.classList.add("disabled");
+      proceedButton.setAttribute("disabled", "disabled");
+    } else {
+      // Nascondi il messaggio di avviso se ci sono prodotti nel carrello
+      alertMessage.classList.add("d-none");
+      // Abilita il tasto "Procedi"
+      proceedButton.classList.remove("disabled");
+      proceedButton.removeAttribute("disabled");
     }
+  }
 
-    // Aggiungi un ascoltatore di eventi ai pulsanti "Aggiungi" nei prodotti
-    const addButtons = document.querySelectorAll('.add-quantity');
-    if (addButtons) {
-        addButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                // Aggiungi qui la logica per aggiungere il prodotto al carrello
-                // ...
+  // Aggiungi un ascoltatore di eventi al link "Procedi"
+  const proceedButton = document.querySelector('a[href="cart-step-2"]');
+  if (proceedButton) {
+    proceedButton.addEventListener("click", function (event) {
+      // Verifica se il carrello è vuoto prima di procedere
+      checkCartNotEmpty();
 
-                // Dopo l'aggiunta del prodotto, verifica nuovamente il carrello
-                checkCartNotEmpty();
+      // Se il carrello è vuoto, interrompi l'azione predefinita del link
+      if (
+        !document.getElementById("alert-message").classList.contains("d-none")
+      ) {
+        event.preventDefault();
+      }
+    });
+  }
 
-                // Rimuovi l'ascoltatore di eventi dopo l'aggiunta del primo prodotto
-                button.removeEventListener('click', this);
-            });
-        });
-    }
+  // Aggiungi un ascoltatore di eventi ai pulsanti "Aggiungi" nei prodotti
+  const addButtons = document.querySelectorAll(".add-quantity");
+  if (addButtons) {
+    addButtons.forEach((button) => {
+      button.addEventListener("click", function () {
+        // Aggiungi qui la logica per aggiungere il prodotto al carrello
+        // ...
+
+        // Dopo l'aggiunta del prodotto, verifica nuovamente il carrello
+        checkCartNotEmpty();
+
+        // Rimuovi l'ascoltatore di eventi dopo l'aggiunta del primo prodotto
+        button.removeEventListener("click", this);
+      });
+    });
+  }
 </script>
-

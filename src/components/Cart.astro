@@ -2,12 +2,25 @@
 
 ---
 <div class="cart sticky-top">
-	<ul id="cart-items">
+	<ul id="cart-items" class="cart-items">
 		<!-- Elementi del carrello saranno aggiunti qui -->
 	</ul>
 	<p class="fs-5 fw-bold">Totale: € <span id="cart-total">0.00</span></p>
 </div>
 
-<style>
-  
+<style lang="scss" is:global>
+  .cart-items {
+		list-style: none;
+	}
+	.cart-item + .cart-item {
+		margin-top: 8px;
+		border-top: 1px solid #ccc;
+	}
+
+	.cart-item {
+		padding-block: 8px;
+		.quantity, .item-total, .category-name {
+			font-weight: bold;
+		}
+	}
 </style>

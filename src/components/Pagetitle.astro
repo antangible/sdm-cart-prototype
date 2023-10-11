@@ -1,24 +1,22 @@
 ---
 interface Props {
-	title: string;
-	subtitle: string;
-    link: string;
-    href: string;
-    icona: string;
+  title: string;
+  subtitle: string;
+  link: string;
+  href: string;
+  icona: string;
 }
 
 const { icona, link, href, title, subtitle } = Astro.props;
 ---
 
 <div class="pb-4">
-    <i class={icona}></i>
-    <a href={href}>{link}</a>
-    <div class="pt-4">
-      <h1 set:html={title} />
-      <p set:html={subtitle}class="fs-5" />
-    </div>
+  <i class={icona}></i>
+  <a href={href}>{link}</a>
+  <div class="pt-4">
+    <h1 set:html={title} />
+    <p set:html={subtitle} class="fs-5" />
+  </div>
 </div>
 
-<style>
-	
-</style>
+<style></style>
