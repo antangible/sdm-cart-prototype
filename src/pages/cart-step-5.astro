@@ -139,7 +139,7 @@ import Sectiontitle from "../components/Sectiontitle.astro";
 
           <!-- seleziona date -->
 
-          <div class="border-top pt-4 mt-4">
+          <div class="border-top pt-4 mt-4 select-date">
             <Sectiontitle
             icon="fa-solid fa-check"
             title="Seleziona le date"
@@ -411,6 +411,8 @@ import Sectiontitle from "../components/Sectiontitle.astro";
       messageDiv.classList.remove("d-none");
       messageDiv.classList.add("alert", "alert-warning");
       messageDiv.setAttribute("role", "alert");
+
+      document.querySelector(".select-date").classList.add("bg-warning", "bg-gradient", "bg-opacity-25");
     }
   });
 
