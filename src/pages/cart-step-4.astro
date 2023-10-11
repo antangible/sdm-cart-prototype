@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Product from '../components/Product.astro';
 import Cart from '../components/Cart.astro';
 import Pagetitle from '../components/Pagetitle.astro';
-import Sectiontitle from '../components/Pagetitle.astro';
+import Sectiontitle from '../components/Sectiontitle.astro';
 ---
 
 <Layout title="SdM Fake cart">
@@ -28,13 +28,13 @@ import Sectiontitle from '../components/Pagetitle.astro';
        
         <div class="border-top pt-4 mt-4 d-md-flex justify-content-between">
           <div>
+
             <Sectiontitle
               icon="fa-solid fa-check"
-              title="Section title"
-              subtitle="Section subtitle"
-              />
-            <h5 class="mb-0"><strong>Dati intestatario</strong></h5>
-            <p>Puo usare i dati del tuo account per intestare a te stesso questo biglietto</p>
+              title="Dati intestatario"
+              subtitle="Puo usare i dati del tuo account per intestare a te stesso questo biglietto"
+            />
+
           </div>
           <div class="form-check form-switch py-2">
             <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked">
@@ -88,8 +88,13 @@ import Sectiontitle from '../components/Pagetitle.astro';
 				<!-- seleziona date -->
 
 				<div class="border-top pt-4 mt-4">
-					<h5 class="mb-0"><strong>Seleziona le date</strong></h5>
-					<p>Puoi selezionare al massimo 3 date</p>
+
+          <Sectiontitle
+              icon="fa-solid fa-check"
+              title="Seleziona le date"
+              subtitle="Puoi selezionare al massimo 3 date"
+            />
+
 					<div class="py-4 d-md-flex">
 						<div class="w-100 pe-md-4 pb-4">
 							<input type="checkbox" class="btn-check" id="btn-check-14" autocomplete="off">
@@ -124,10 +129,13 @@ import Sectiontitle from '../components/Pagetitle.astro';
 				<!-- cross sell -->
 				
 				<div id="cross-sell-catalogo" class="border-top pt-4 mt-4 d-md-flex justify-content-between">
-					<div>
-						<h5 class="mb-0"><strong>Ritira catalogo in fiera</strong></h5>
-						<p>quanti cataloghi verranno ritirati da [te]?</p>
-					</div>
+
+          <Sectiontitle
+            icon="fa-solid fa-check"
+            title="Ritira catalogo in fiera"
+            subtitle="quanti cataloghi verranno ritirati da [te]"
+          />
+          
 					<div class="d-flex justify-content-between">
 						<p class="pe-4 mb-0 pt-2"><span class="fw-bold" id="quantita-cataloghi">[4]</span> cataloghi da assegnare</p>
 						<div class="quantity"><button class="remove-quantity btn btn-secondary" disabled="">-</button><span class="product-quantity px-3">0</span><button class="add-quantity btn btn-secondary">+</button></div>
@@ -135,10 +143,13 @@ import Sectiontitle from '../components/Pagetitle.astro';
 				</div>
 
 				<div id="cross-sell-biglietti-atm" class="border-top pt-4 mt-4 d-md-flex justify-content-between">
-					<div>
-						<h5 class="mb-0"><strong>Assegna biglietti Atm</strong></h5>
-						<p>quanti biglietti sono intestati a [te]??</p>
-					</div>
+
+          <Sectiontitle
+            icon="fa-solid fa-check"
+            title="Assegna biglietti Atm"
+            subtitle="Quanti biglietti sono intestati a [te]?"
+          />
+
 					<div class="d-flex justify-content-between">
 						<p class="pe-4 mb-0 pt-2"><span class="fw-bold" id="quantita-cataloghi">[4]</span>  biglietti da assegnare</p>
 						<div class="quantity"><button class="remove-quantity btn btn-secondary" disabled="">-</button><span class="product-quantity px-3">0</span><button class="add-quantity btn btn-secondary">+</button></div>
