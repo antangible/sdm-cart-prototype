@@ -128,3 +128,22 @@ function updateCart() {
 
 // Inizializza il carrello
 initializeCart();
+
+// Codice per fare apparire overlay da mobile sul carrello
+// Seleziona l'elemento della checkbox
+const checkbox = document.getElementById('show-cart-items');
+
+// Seleziona il div con la classe 'pippo'
+const overlayDiv = document.querySelector('.overlay');
+
+// Aggiungi un event listener per l'evento di cambio sulla checkbox
+checkbox.addEventListener('change', function() {
+  // Controlla se la checkbox è selezionata
+  if (this.checked) {
+    // Aggiungi la classe 'is-visible' se la checkbox è selezionata
+    overlayDiv.classList.add('is-visible');
+  } else {
+    // Rimuovi la classe 'is-visible' se la checkbox non è selezionata
+    overlayDiv.classList.remove('is-visible');
+  }
+});

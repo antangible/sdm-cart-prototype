@@ -8,18 +8,21 @@ const { CtaText, CtaUrl } = Astro.props;
 ---
 
 <div class="cart col-lg-4">
-	<div class="bg-lightgrey shadow p-4 sticky-top" style="top: 80px;">
+	<div class="bg-light shadow p-4 sticky-top" style="top: 80px;">
 
-		<div class="d-flex justify-content-between">
+		<input type="checkbox" id="show-cart-items" class="input-expand-cart visually-hidden">
+
+		<label for="show-cart-items" class="d-flex justify-content-between label-expand-cart" style="cursor: pointer;">
 			<span id="total-items"></span>
-			<span class="cart-total fs-5 fw-bold"><span id="cart-total">0.00</span>€</span>
-		</div>
+			<div class="cart-total fs-5 fw-bold">
+				<i class="fa-solid fa-chevron-up me-2"></i>
+				<span id="cart-total">0.00</span>€
+			</div>
+		</label>
 
-		<!-- <div> -->
-			<ul id="cart-items" class="cart-items">
-				<!-- Elementi del carrello saranno aggiunti qui -->
-			</ul>
-		<!-- </div> -->
+		<ul id="cart-items" class="cart-items">
+			<!-- Elementi del carrello saranno aggiunti qui -->
+		</ul>
 
 		<a href={CtaUrl} class="btn btn-primary cta-cart-proceed">{CtaText}</a>
 	</div>
@@ -33,7 +36,7 @@ const { CtaText, CtaUrl } = Astro.props;
 			bottom: 0;
 			left: 0;
 			width: 100%;
-			z-index: 1000;
+			z-index: 3000;
 			background-color: #fff;
 			padding: 0;
 		}
@@ -63,4 +66,30 @@ const { CtaText, CtaUrl } = Astro.props;
 			text-align: right;
 		}
 	}
+
+	.label-expand-cart {
+		pointer-events: none;
+		@media screen and (max-width: 992px) {
+			pointer-events: initial;
+			display: block;
+		}
+	}
+
+	.input-expand-cart:checked ~ .cart-items {
+		display: block;
+	}
+
+	.fa-chevron-up {
+		display: none;
+		@media screen and (max-width: 992px) {
+			display: inline-block;
+		}
+	}
+
+	.input-expand-cart:checked ~ .label-expand-cart {
+		.fa-chevron-up {
+			transform: rotate(180deg);
+		}
+	}
+
 </style>
