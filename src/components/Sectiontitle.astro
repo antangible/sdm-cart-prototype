@@ -1,0 +1,17 @@
+---
+interface Props {
+	title: string;
+	subtitle: string;
+  icon: string;
+}
+
+const { icon, title, subtitle } = Astro.props;
+---
+
+<div class="d-flex me-4">
+    <i class={icon}></i>
+    <div class="">
+      <h5 set:html={title} />
+      <p set:html={subtitle} />
+    </div>
+</div>
