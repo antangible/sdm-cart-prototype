@@ -25,7 +25,7 @@ import Pagetitle from '../components/Pagetitle.astro';
 				
         <!-- Dati intestatario -->
        
-        <div class="border-top pt-4 mt-4 d-flex justify-content-between">
+        <div class="border-top pt-4 mt-4 d-md-flex justify-content-between">
           <div>
             <h5 class="mb-0"><strong>Dati intestatario</strong></h5>
             <p>Puo usare i dati del tuo account per intestare a te stesso questo biglietto</p>
@@ -84,24 +84,24 @@ import Pagetitle from '../components/Pagetitle.astro';
 				<div class="border-top pt-4 mt-4">
 					<h5 class="mb-0"><strong>Seleziona le date</strong></h5>
 					<p>Puoi selezionare al massimo 3 date</p>
-					<div class="py-4 d-flex">
-						<div class="w-100 pe-4">
+					<div class="py-4 d-md-flex">
+						<div class="w-100 pe-md-4 pb-4">
 							<input type="checkbox" class="btn-check" id="btn-check-14" autocomplete="off">
 							<label class="btn btn-outline-secondary w-100" for="btn-check-14">14 aprile</label>
 						</div>
-						<div class="w-100 pe-4">
+						<div class="w-100 pe-md-4 pb-4">
 							<input type="checkbox" class="btn-check" id="btn-check-15" autocomplete="off">
 							<label class="btn btn-outline-secondary w-100" for="btn-check-15">15 aprile</label>
 						</div>
-						<div class="w-100 pe-4">
+						<div class="w-100 pe-md-4 pb-4">
 							<input type="checkbox" class="btn-check" id="btn-check-16" autocomplete="off">
 							<label class="btn btn-outline-secondary w-100" for="btn-check-16">16 aprile</label>
 						</div>
-						<div class="w-100 pe-4">
+						<div class="w-100 pe-md-4 pb-4">
 							<input type="checkbox" class="btn-check" id="btn-check-17" autocomplete="off">
 							<label class="btn btn-outline-secondary w-100" for="btn-check-17">17 aprile</label>
 						</div>
-						<div class="w-100 pe-4">
+						<div class="w-100 pe-md-4 pb-4">
 							<input type="checkbox" class="btn-check" id="btn-check-18" autocomplete="off">
 							<label class="btn btn-outline-secondary w-100" for="btn-check-18">18 aprile</label>
 						</div>
@@ -117,23 +117,23 @@ import Pagetitle from '../components/Pagetitle.astro';
 
 				<!-- cross sell -->
 				
-				<div id="cross-sell-catalogo" class="border-top pt-4 mt-4 d-flex justify-content-between">
+				<div id="cross-sell-catalogo" class="border-top pt-4 mt-4 d-md-flex justify-content-between">
 					<div>
 						<h5 class="mb-0"><strong>Ritira catalogo in fiera</strong></h5>
 						<p>quanti cataloghi verranno ritirati da [te]?</p>
 					</div>
-					<div class="d-flex">
-						<p class="pe-4 mb-0 pt-2"><span id="quantita-cataloghi"></span> cataloghi da assegnare</p>
+					<div class="d-flex justify-content-between">
+						<p class="pe-4 mb-0 pt-2"><span class="fw-bold" id="quantita-cataloghi">[4]</span>cataloghi da assegnare</p>
 						<div class="quantity"><button class="remove-quantity btn btn-secondary" disabled="">-</button><span class="product-quantity px-3">0</span><button class="add-quantity btn btn-secondary">+</button></div>
 					</div>
 				</div>
 
-				<div id="cross-sell-biglietti-atm" class="border-top pt-4 mt-4 d-flex justify-content-between">
+				<div id="cross-sell-biglietti-atm" class="border-top pt-4 mt-4 d-md-flex justify-content-between">
 					<div>
 						<h5 class="mb-0"><strong>Assegna biglietti Atm</strong></h5>
 						<p>quanti biglietti sono intestati a [te]??</p>
 					</div>
-					<div class="d-flex">
+					<div class="d-flex justify-content-between">
 						<p class="pe-4 mb-0 pt-2"><span id="quantita-cataloghi"></span> biglietti da assegnare</p>
 						<div class="quantity"><button class="remove-quantity btn btn-secondary" disabled="">-</button><span class="product-quantity px-3">0</span><button class="add-quantity btn btn-secondary">+</button></div>
 					</div>
