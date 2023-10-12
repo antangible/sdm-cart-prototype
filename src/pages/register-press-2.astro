@@ -23,9 +23,9 @@ import Cardutente from '../components/Cardutente.astro';
             </div>
 
             <Pagetitle
-            href="/register-operatore-1/"
+            href="/register-press-1/"
             link="torna indietro"
-            title="Informazioni personali"
+            title="Informazioni professionali"
             subtitle="Ci occorrono per garantirti i migliori servizi durante la visita del Saloni e per la raccolta dati statistici anonimi"
             />
 
@@ -33,48 +33,154 @@ import Cardutente from '../components/Cardutente.astro';
 
             <form>
               <div class="mb-3">
-                <label for="tipo-operatore" class="form-label">Tipo di operatore*</label>
+                <label for="tipo-operatore" class="form-label">Ruolo*</label>
                 <select class="form-select" aria-label="Default select example">
                   <option selected></option>
-                  <option value="1">Ad & Professional</option>
-                  <option value="2">Agente</option>
-                  <option value="3">Buyer</option>
-                  <option value="3">Contractor</option>
-                  <option value="3">Distributore</option>
-                  <option value="3">Fornitore</option>
+                  <option value="1">Direttore</option>
+                  <option value="2">Vice-direttore</option>
+                  <option value="3">Caporedattore</option>
+                  <option value="4">Vice-caporedattore</option>
+                  <option value="5">Inviato</option>
+                  <option value="6">Caposervizio</option>
+                  <option value="7">Vice-caposervizio</option>
+                  <option value="8">Redattore</option>
+                  <option value="9">Freelance</option>
+                  <option value="10">Corrispondente estero</option>
+                  <option value="11">Art director</option>
+                  <option value="12">Fotografo</option>
+                  <option value="13">Autore o Conduttore Radio o Tv</option>
+                  <option value="14">Cameramen</option>
+                  <option value="15">Styilist</option>
+                  <option value="16">Altro</option>
                 </select>
               </div>
-              <div class="mb-3">
-                <label for="azienda" class="form-label">Nome dello studio o dell'azienda*</label>
-                <input type="text" class="form-control" id="Cognome">
-              </div>
-              <div class="mb-3">
-                <label for="ruolo" class="form-label">Ruolo all'interno dell'azienda*</label>
-                <select class="form-select" aria-label="Default select example">
-                  <option selected></option>
-                  <option value="1">Junior professional</option>
-                  <option value="2">Senior professional</option>
-                  <option value="3">Project manager</option>
-                  <option value="3">Titolare / Manager / Director</option>
-                  <option value="3">Altro</option>
-                </select>
-              </div>
-              <a href="/register-operatore-3/" type="submit" class="btn btn-primary mt-4">Continua</a>
             </form>
 
+            <div class="my-5">
+              <h5><strong>Inerisci i dati della tua testata giornalistica</strong></h5>
+              <h5>Puoi aggiungerne altre se collabori con più testate</h5>
+            </div>
 
-
+            <div class="accordion accordion-flush" id="testata-1">
+              <div class="accordion-item bg-light">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Dati testata giornalistica
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <form id="testata-1">
+                      <div class="mb-3">
+                        <label for="azienda" class="form-label">Nome della testata*</label>
+                        <input type="text" class="form-control" id="nome-testata">
+                      </div>
+                      <div class="mb-3">
+                        <label for="azienda" class="form-label">Città*</label>
+                        <input type="text" class="form-control" id="città-testata">
+                      </div>
+                      <div class="mb-3">
+                        <label for="azienda" class="form-label">Nazione*</label>
+                        <input type="text" class="form-control" id="nazione-testata">
+                      </div>
+                      <div class="mb-3">
+                        <label for="azienda" class="form-label">Sito web*</label>
+                        <input type="text" class="form-control" id="sito-testata">
+                      </div>
+                      <div class="mb-3">
+                        <label for="ruolo" class="form-label">Tipologia*</label>
+                        <select class="form-select" aria-label="tipo-testata">
+                          <option selected></option>
+                          <option value="1">Quotidiano</option>
+                          <option value="2">Settimanale</option>
+                          <option value="3">Mensile</option>
+                          <option value="3">Bimestrale</option>
+                          <option value="3">Semestrale</option>
+                          <option value="3">Annuale</option>
+                          <option value="3">Semestrale</option>
+                          <option value="3">Agenzia stampa</option>
+                          <option value="3">Agenzia fotografica</option>
+                          <option value="3">Radio</option>
+                          <option value="3">Televisione</option>
+                          <option value="3">Altro</option>
+                        </select>
+                      </div>
+                      <div class="mb-3">
+                        <label for="ruolo" class="form-label">Settore*</label>
+                        <select class="form-select" aria-label="tipo-testata">
+                          <option selected></option>
+                          <option value="1">Architettura</option>
+                          <option value="2">Arte</option>
+                          <option value="3">Attualità </option>
+                          <option value="3">Cultura</option>
+                          <option value="3">Design</option>
+                          <option value="3">Economia</option>
+                          <option value="3">Edilizia</option>
+                          <option value="3">Food</option>
+                          <option value="3">Formazione</option>
+                          <option value="3">Fotografia</option>
+                          <option value="3">Lifestyle</option>
+                          <option value="3">Luxury</option>
+                          <option value="3">Moda</option>
+                          <option value="3">Ospitalità</option>
+                          <option value="3">Sostenibilità</option>
+                          <option value="3">LuSportxury</option>
+                          <option value="3">Tecnologia</option>
+                          <option value="3">Viaggi</option>
+                          <option value="3">Specializzato Bagno</option>
+                          <option value="3">Specializzato Cucina</option>
+                          <option value="3">Specializzato Elettrodomestici</option>
+                          <option value="3">Specializzato Illuminazione</option>
+                          <option value="3">Specializzato Ufficio</option>
+                          <option value="3">Test</option>
+                          <option value="3">Altro</option>
+                        </select>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
 
 
-        <div class="col-md-6">
-          <img class="d-none d-md-block w-100" src="https://salonemilano.my.site.com/identity/resource/1681233057000/SDM/assets/home_salesforce.jpg" alt="">
+            
+            
+          <button type="button" id="aggiungi-testata" class="btn btn-sm btn-outline-secondary w-100 my-4">Aggiungi un'altra testata</button>
 
+          <h5 class="mt-4"><strong>Altre collaborazioni</strong></h5>
+          <form action="" class="d-flex">
+            <div class="mb-3 w-100">
+              <label for="azienda" class="form-label">Nome della testata</label>
+              <input type="text" class="form-control" id="nome-testata">
+            </div>
+            <div class="mb-3 w-100">
+              <label for="azienda" class="form-label">Nazione</label>
+              <input type="text" class="form-control" id="città-testata">
+            </div>
+          </form>
+
+          <form action="" class="d-flex g-4">
+            <div class="mb-3 w-100">
+              <label for="azienda" class="form-label">Nome della testata</label>
+              <input type="text" class="form-control" id="nome-testata">
+            </div>
+            <div class="mb-3 w-100">
+              <label for="azienda" class="form-label">Nazione</label>
+              <input type="text" class="form-control" id="città-testata">
+            </div>
+          </form>
+
+          <a href="/register-press-3/" type="submit" class="btn btn-primary mt-4">Continua</a>
         </div>
       </div>
-    </div>
+          
+      <div class="col-md-6">
+        <img class="d-none d-md-block w-100" src="https://salonemilano.my.site.com/identity/resource/1681233057000/SDM/assets/home_salesforce.jpg" alt="">
+
+      </div>
+
   </div>
+</div>
 
 </main>
 
@@ -87,3 +193,113 @@ import Cardutente from '../components/Cardutente.astro';
     padding-top: 72px;
   }
 </style>
+
+<script>
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const aggiungiTestataButton = document.getElementById("aggiungi-testata");
+  
+  // Counter to keep track of the new divs created
+  let counter = 2;
+
+  aggiungiTestataButton.addEventListener("click", function() {
+      // Collapse all current accordions
+      const allAccordions = document.querySelectorAll(".accordion-collapse.show");
+      allAccordions.forEach(accordion => {
+          accordion.classList.remove("show");
+      });
+
+      // Template for the new block
+      const newBlock = `
+      <div class="accordion accordion-flush mt-4" id="testata-${counter}">
+        <div class="accordion-item bg-light">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Dati testata giornalistica
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <form id="testata-1">
+                <div class="mb-3">
+                  <label for="azienda" class="form-label">Nome della testata*</label>
+                  <input type="text" class="form-control" id="nome-testata">
+                </div>
+                <div class="mb-3">
+                  <label for="azienda" class="form-label">Città*</label>
+                  <input type="text" class="form-control" id="città-testata">
+                </div>
+                <div class="mb-3">
+                  <label for="azienda" class="form-label">Nazione*</label>
+                  <input type="text" class="form-control" id="nazione-testata">
+                </div>
+                <div class="mb-3">
+                  <label for="azienda" class="form-label">Sito web*</label>
+                  <input type="text" class="form-control" id="sito-testata">
+                </div>
+                <div class="mb-3">
+                  <label for="ruolo" class="form-label">Tipologia*</label>
+                  <select class="form-select" aria-label="tipo-testata">
+                    <option selected></option>
+                    <option value="1">Quotidiano</option>
+                    <option value="2">Settimanale</option>
+                    <option value="3">Mensile</option>
+                    <option value="3">Bimestrale</option>
+                    <option value="3">Semestrale</option>
+                    <option value="3">Annuale</option>
+                    <option value="3">Semestrale</option>
+                    <option value="3">Agenzia stampa</option>
+                    <option value="3">Agenzia fotografica</option>
+                    <option value="3">Radio</option>
+                    <option value="3">Televisione</option>
+                    <option value="3">Altro</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="ruolo" class="form-label">Settore*</label>
+                  <select class="form-select" aria-label="tipo-testata">
+                    <option selected></option>
+                    <option value="1">Architettura</option>
+                    <option value="2">Arte</option>
+                    <option value="3">Attualità </option>
+                    <option value="3">Cultura</option>
+                    <option value="3">Design</option>
+                    <option value="3">Economia</option>
+                    <option value="3">Edilizia</option>
+                    <option value="3">Food</option>
+                    <option value="3">Formazione</option>
+                    <option value="3">Fotografia</option>
+                    <option value="3">Lifestyle</option>
+                    <option value="3">Luxury</option>
+                    <option value="3">Moda</option>
+                    <option value="3">Ospitalità</option>
+                    <option value="3">Sostenibilità</option>
+                    <option value="3">LuSportxury</option>
+                    <option value="3">Tecnologia</option>
+                    <option value="3">Viaggi</option>
+                    <option value="3">Specializzato Bagno</option>
+                    <option value="3">Specializzato Cucina</option>
+                    <option value="3">Specializzato Elettrodomestici</option>
+                    <option value="3">Specializzato Illuminazione</option>
+                    <option value="3">Specializzato Ufficio</option>
+                    <option value="3">Test</option>
+                    <option value="3">Altro</option>
+                  </select>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      `;
+
+      // Append the new block to the parent container
+      aggiungiTestataButton.insertAdjacentHTML("beforebegin", newBlock);
+
+      // Increase the counter for next time
+      counter++;
+  });
+});
+
+</script>
