@@ -1,0 +1,61 @@
+
+---
+import Layout from '../layouts/Layout.astro';
+import Pagetitle from '../components/Pagetitle.astro';
+import Cardutente from '../components/Cardutente.astro';
+---
+
+
+
+
+
+<Layout title="Operatore | conferma creazione account">
+
+  <main>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="px-5 py-5 w-75 m-auto">
+            
+            <div class="pt-3 pb-5">
+              <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" style="width: 100%"></div>
+              </div>
+            </div>
+
+            <div class="alert alert-success" role="alert">
+              <i class="fa-solid fa-circle-check pe-4"></i>
+              Registrazione completata con successo!
+            </div>
+
+            <Pagetitle
+            title="Cosa vuoi fare ora?"
+            subtitle="Puoi visitare il sito del Salone del Mobile o accedere alla tua area riservata, e completare il tuo profilo aggiungendo le tue preferenze."
+            />
+
+            <div class="d-flex">
+              <button type="button" class="btn btn-outline-primary me-3">Visita il sito</button>
+              <button type="button" class="btn btn-primary">Completa il tuo profilo</button>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <img class="d-none d-md-block w-100" src="https://salonemilano.my.site.com/identity/resource/1681233057000/SDM/assets/home_salesforce.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+ 
+</Layout>
+
+
+<style>
+  main {
+    padding-top: 72px;
+  }
+</style>
