@@ -1,0 +1,30 @@
+---
+interface Props {
+	title: string;
+	subtitle: string;
+  entrance: string;
+  prezzo1: string;
+  prezzo2: string;
+  prezzo3: string;
+  cta: string;
+  href: string;
+}
+
+const { title, subtitle, entrance, prezzo1, prezzo2, prezzo3, href, cta } = Astro.props;
+---
+
+<div class="card bg-light p-2 mb-4">
+  <div class="card-body">
+    <h5 class="card-title fw-bold">{title} <i class="fa-solid fa-circle-info text-primary ps-3"></i></h5> 
+    <h5>{subtitle}</h5>
+    <p class="mb-0 mt-3">Puoi accedere ai Saloni:</p>
+    <p><strong>{entrance}</strong></p>
+    <ul>
+      <li class="text-muted"><i class="fa-solid fa-check pe-2"></i><span>{prezzo1} </span></li>
+      <li class="text-muted"><i class="fa-solid fa-check pe-2"></i><span>{prezzo2} </span></li>
+      <li class="text-muted"><i class="fa-solid fa-check pe-2"></i><span>{prezzo3} </span></li>
+    </ul>
+    <a href={href} class="btn btn-primary stretched-link btn-sm mt-4">{cta}</a>
+  </div>
+</div>
+

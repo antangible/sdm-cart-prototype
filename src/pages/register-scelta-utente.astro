@@ -1,0 +1,87 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Pagetitle from '../components/Pagetitle.astro';
+import Cardutente from '../components/Cardutente.astro';
+---
+
+
+
+
+
+<Layout title="Scegli la tipologia di utente">
+
+  <main>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="px-5 py-5 w-75 m-auto">
+            <Pagetitle
+            title="Seleziona il tipo di visitatore"
+            subtitle="Te lo chiediamo ora per indirizzarti correttamente nella creazione del tuo profilo"
+            />
+
+            <!-- card tipo utente -->
+
+            <Cardutente
+            title="Seleziona il tipo di visitatore";
+          	subtitle="Te lo chiediamo ora per indirizzarti correttamente nella creazione del tuo profilo";
+            entrance="In tutte le giornate";
+            prezzo1="1 giorno / € 35,00";
+            prezzo2="3 giorni/ € 90,00";
+            prezzo3="6 giorni / € 180,00";
+            cta="Sono un operatore del settore"
+            href="/register-operatore-1/"
+            />
+
+            <Cardutente
+            title="Press&Media";
+          	subtitle="Te lo chiediamo ora per indirizzarti correttamente nella creazione del tuo profilo";
+            entrance="In tutte le giornate";
+            prezzo1="1 giorno / € 35,00";
+            prezzo2="3 giorni/ € 90,00s";
+            prezzo3="6 giorni / € 180,00";
+            cta="faccio parte di Press&Media"
+            href="/register-press-1/"
+            />
+
+            <Cardutente
+            title="Seleziona il tipo di visitatore";
+          	subtitle="Te lo chiediamo ora per indirizzarti correttamente nella creazione del tuo profilo";
+            entrance="In tutte le giornate";
+            prezzo1="1 giorno / € 35,00";
+            prezzo2="3 giorni/ € 90,00s";
+            prezzo3="6 giorni / € 180,00";
+            cta="Faccio parte del pubblico generico"
+            href="/register-generico-1/"
+            />
+
+          </div>
+        </div>
+
+
+        <div class="col-md-6">
+          <img class="d-none d-md-block w-100" src="https://salonemilano.my.site.com/identity/resource/1681233057000/SDM/assets/home_salesforce.jpg" alt="">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+ 
+</Layout>
+
+
+<style>
+  main {
+    padding-top: 72px;
+}
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  li {
+  padding-bottom: 8px;
+  }
+</style>

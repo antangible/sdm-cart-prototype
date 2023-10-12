@@ -4,8 +4,7 @@ import Pagetitle from '../components/Pagetitle.astro';
 ---
 
 
-<Layout title="Home">
-
+<Layout title="Registrati">
     <main>
         <div class="container-fluid">
           <div class="row">
@@ -16,33 +15,37 @@ import Pagetitle from '../components/Pagetitle.astro';
                 subtitle="Registrandoti al sito potrai:"
                 />
 
-                <ul>
-                  <li><i class="fa-solid fa-circle-check pe-2"></i>Vantaggio uno</li>
-                  <li><i class="fa-solid fa-circle-check pe-2"></i>Vantaggio uno</li>
-                  <li><i class="fa-solid fa-circle-check pe-2"></i>Vantaggio uno</li>
+                <ul class="mb-4">
+                  <li><i class="fa-solid fa-circle-check pe-2"></i>Prenotare e acquistare velocemente i tuoi biglietti</li>
+                  <li><i class="fa-solid fa-circle-check pe-2"></i>Seguire eventi in streaming e ottieni servizi dedicati</li>
+                  <li><i class="fa-solid fa-circle-check pe-2"></i>Restare aggiornato sui migliori trend internazionali</li>
                 </ul>
 
                 <div class="mb-4">
-                  <label for="exampleFormControlInput1" class="form-label">Inserisci la tua mail*</label>
-                  <input type="email" class="form-control" id="exampleFormControlInput1">
+                  <label for="emailInput" class="form-label">Inserisci la tua mail*</label>
+                  <input type="email" class="form-control" id="emailInput">
+              </div>
+              
+              <div class="mb-4">
+                  <label for="passwordInput" class="form-label">Crea la tua password*</label>
+                  <input type="password" class="form-control" id="passwordInput">
+              </div>
+
+                <ul id="pasword-control">
+                  <li id="check-caratteri" class="fs-7 text-black-50"><i class="fa-solid fa-check pe-2"></i> <span>Minimo 8 caratterli</span></li>
+                  <li id="check-maiuscola"  class="fs-7 text-black-50"><i class="fa-solid fa-check pe-2"></i> <span>Almeno una maiuscola</span></li>
+                  <li id="check-speciale" class="fs-7 text-black-50"><i class="fa-solid fa-check pe-2"></i> <span>Almeno una carattere speciale</span></li>
+                </ul>
+
+                <div id="passwordAlert" class="alert alert-danger d-none" role="alert">
+                  Attenzione, la password non soddisfa i criteri di sicurezza.
                 </div>
-
-                <div id="emailErrorAlert" class="alert alert-danger d-none" role="alert">
-                  Invalid email format!
-                </div>
-
-                <div class="alert alert-light mb-4" role="alert">
-                  <strong>Accesso Rapido</strong><br>Ti manderemo un codice per la login senza necessità di inserire la password. Se invece preferisci, puoi <a href="">accedere con la password</a>.
-                </div>
-
-                <a href="/register/" id="accediButton" class="btn btn-primary mb-4" role="button" aria-disabled="true">Accedi con la mail</a>
-
-                <p>Non hai un account? <a href="">Registrati ora</a></p>
-
+                <a href="/register-scelta-utente/" id="registratiButton" class="btn btn-primary mb-4" role="button" aria-disabled="true">Registrati</a>
+                
               </div>
             </div>
             <div class="col-md-6">
-              <img src="https://salonemilano.my.site.com/identity/resource/1681233057000/SDM/assets/home_salesforce.jpg" alt="">
+              <img class="d-none d-md-block w-100"  src="https://salonemilano.my.site.com/identity/resource/1681233057000/SDM/assets/home_salesforce.jpg" alt="">
 
             </div>
             </div>
@@ -58,44 +61,75 @@ import Pagetitle from '../components/Pagetitle.astro';
   main {
     padding-top: 72px;
 }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+    li {
+    padding-bottom: 8px;
+    }
+    .fs-7 {
+    font-size: 12px;
+    }
 </style>
 
-<!-- controlli sulla mail -->
+<!-- controlli sulla password -->
+
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-  
-      const emailInput = document.getElementById('exampleFormControlInput1');
-      const errorAlert = document.getElementById('emailErrorAlert');
-      const accediButton = document.getElementById('accediButton');
-  
-      const checkEmailFormat = () => {
-          let email = emailInput.value;
-  
-          // Initially remove 'is-invalid' in case it was added from a previous check
-          emailInput.classList.remove('is-invalid');
-  
-          if (email.indexOf('@') === -1 || email.indexOf('.') === -1) {
-              errorAlert.textContent = "Invalid email format!";
-              
-              if(email.indexOf('@') === -1) {
-                  errorAlert.textContent += " Email should contain '@'.";
-              }
-  
-              if(email.indexOf('.') === -1) {
-                  errorAlert.textContent += " Email should contain '.'.";
-              }
-              
-              errorAlert.classList.remove('d-none');
-              emailInput.classList.add('is-invalid');  // Add 'is-invalid' to the input
-              return false;
-          } else {
-              errorAlert.classList.add('d-none');
-              return true;
-          }
-      };
-  
-      accediButton.addEventListener('click', checkEmailFormat);
-  });
-  </script>
-    
+  document.addEventListener("DOMContentLoaded", function() {
+    const passwordInput = document.getElementById('passwordInput');
+    const registratiButton = document.getElementById('registratiButton');
+    const passwordAlert = document.getElementById('passwordAlert');
+
+    passwordInput.addEventListener('input', function() {
+        const val = passwordInput.value;
+
+        // Check for length
+        if (val.length >= 8) {
+            document.getElementById('check-caratteri').classList.remove('text-black-50');
+            document.getElementById('check-caratteri').classList.add('text-success');
+        } else {
+            document.getElementById('check-caratteri').classList.add('text-black-50');
+            document.getElementById('check-caratteri').classList.remove('text-success');
+        }
+
+        // Check for uppercase
+        if (/[A-Z]/.test(val)) {
+            document.getElementById('check-maiuscola').classList.remove('text-black-50');
+            document.getElementById('check-maiuscola').classList.add('text-success');
+        } else {
+            document.getElementById('check-maiuscola').classList.add('text-black-50');
+            document.getElementById('check-maiuscola').classList.remove('text-success');
+        }
+
+        // Check for special character
+        if (/[\W_]/.test(val)) {
+            document.getElementById('check-speciale').classList.remove('text-black-50');
+            document.getElementById('check-speciale').classList.add('text-success');
+        } else {
+            document.getElementById('check-speciale').classList.add('text-black-50');
+            document.getElementById('check-speciale').classList.remove('text-success');
+        }
+    });
+
+    function validatePassword(event) {
+        const val = passwordInput.value;
+
+        // Validation criteria
+        const hasEightCharacters = val.length >= 8;
+        const hasUppercase = /[A-Z]/.test(val);
+        const hasSpecialCharacter = /[\W_]/.test(val);
+
+        if (!hasEightCharacters || !hasUppercase || !hasSpecialCharacter) {
+            event.preventDefault();
+            passwordAlert.classList.remove('d-none');
+        } else {
+            passwordAlert.classList.add('d-none');
+        }
+    }
+
+    registratiButton.addEventListener('click', validatePassword);
+});
+
+</script>
