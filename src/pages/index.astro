@@ -6,14 +6,60 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="Home">
 
     <main>
+
+      <div class="container-fluid bg-danger py-2">
         <div class="container">
-            <a class="btn btn-primary" href="/cart-step-1/">Acquisto da loggato</a>
+          <p class="text-white fs-3 text-center mb-0">Salone del Mobile.Milano | 16-21 Aprile 2024
+            <button class="ms-3 btn-sm btn btn-outline-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+              <i class="fa-solid fa-chevron-down"></i>
+          </button>
+        </p>
+        <!-- <div style="min-height: 120px;">
+          <div class="collapse collapse-horizontal d-flex" id="collapseWidthExample">
+            <div class="col">dsgahfs</div>
+            <div class="col">dsgahfs</div>
+            <div class="col">dsgahfs</div>
+            <div class="col">dsgahfs</div>
+          </div> -->
+        </div>
+      </p>
         </div>
 
+      </div>
+
+        <!-- carosello -->
 
         <div class="container">
-            <a class="btn btn-primary" href="//">Acquisto da NON loggato</a>
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="https://www.salonemilano.it/sites/default/files/styles/libero/public/2023-10/SaloneSatellite-1-salonemilano.jpg.webp?itok=_adfceSa" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="..." class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="..." class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+            </div>
         </div>
+
+      
 
     </main>
 </Layout>
+
+<style>
+  main{
+    padding-top: 80px;
+  } 
+</style>
