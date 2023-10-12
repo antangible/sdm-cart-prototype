@@ -1,0 +1,65 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Pagetitle from '../components/Pagetitle.astro';
+import Cardutente from '../components/Cardutente.astro';
+---
+
+
+
+
+
+<Layout title="Scegli la tipologia di utente">
+
+  <main>
+    <div class="container">
+
+      <Pagetitle
+        title="Di che biglietto hai bisogno?"
+        subtitle="Scegli attentamente perché le tipologie di biglietto e le giornate di visita variano in base al tuo profilo."
+        />
+
+      <div class="row">
+        <div class="col col-md-4">
+          <Cardutente
+            title="Operatore del settore";
+            subtitle="Professionisti, designer, buyer, rivenditori, contractor, ecc...";
+            entrance="In tutte le giornate";
+            prezzo1="1 giorno / € 35,00";
+            prezzo2="3 giorni/ € 90,00";
+            prezzo3="6 giorni / € 180,00";
+            cta="Biglietti da operatore"
+            href="/register-integrata-3/"
+            />
+        </div>
+        <div class="col col-md-4">
+          <Cardutente
+            title="Press&Media";
+            subtitle="Giornalisti, blogger, editor, PR, gotografi, ecc.";
+            entrance="In tutte le giornate";
+            prezzo1="Accreedito gratuito su richiesta";
+            prezzo2="3 giorni/ € 90,00s";
+            prezzo3="6 giorni / € 180,00";
+            cta="Biglietti Press&Media"
+            href="/register-integrata-3/"
+            />
+        </div>
+        <div class="col col-md-4">
+          <Cardutente
+            title="Pubblico generico";
+            subtitle="Amanti del design, non professionisti, studenti";
+            entrance="Sabato o domenica. Se sei studente, l’accesso è possibile anche il venerdì.";
+            prezzo1="1 giorno / € 35,00";
+            prezzo2="1 giorno (studenti)/ €25,00";
+            prezzo3="6 giorni / € 180,00";
+            cta="Biglietti per pubblico generico"
+            href="/register-integrata-3/"
+            />
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+ 
+</Layout>
+
