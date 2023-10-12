@@ -1,0 +1,73 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Pagetitle from '../components/Pagetitle.astro';
+import Cardutente from '../components/Cardutente.astro';
+---
+
+
+
+
+
+<Layout title="Scegli la tipologia di utente">
+
+  <main>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="px-5 py-5 w-75 m-auto">
+            
+            <div class="py-3">
+              <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" style="width: 0%"></div>
+              </div>
+            </div>
+
+            <Pagetitle
+            title="Informazioni personali"
+            subtitle="Ci occorrono per garantirti i migliori servizi durante la visita del Saloni e per la raccolta dati statistici anonimi"
+            />
+
+            <!-- form -->
+
+            <form>
+              <div class="mb-3">
+                <label for="Nome" class="form-label">Nome*</label>
+                <input type="text" class="form-control" id="nome" aria-describedby="nomeHelp">
+                <!-- <div id="nomeHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+              </div>
+              <div class="mb-3">
+                <label for="Cognome" class="form-label">Cognome*</label>
+                <input type="text" class="form-control" id="Cognome">
+              </div>
+              <div class="mb-3">
+                <label for="Telefono" class="form-label">Telefono*</label>
+                <input type="text" class="form-control" id="Telefonos">
+              </div>
+              <a href="/register-operatore-2/" type="submit" class="btn btn-primary mt-4">Continua</a>
+            </form>
+
+
+
+          </div>
+        </div>
+
+
+        <div class="col-md-6">
+          <img class="d-none d-md-block w-100" src="https://salonemilano.my.site.com/identity/resource/1681233057000/SDM/assets/home_salesforce.jpg" alt="">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+ 
+</Layout>
+
+
+<style>
+  main {
+    padding-top: 72px;
+  }
+</style>

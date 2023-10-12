@@ -1,0 +1,60 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Pagetitle from '../components/Pagetitle.astro';
+import Cardutente from '../components/Cardutente.astro';
+---
+
+
+
+
+
+<Layout title="Scegli la tipologia di utente">
+
+  <main>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="px-5 py-5 w-75 m-auto">
+            
+            <div class="pt-3 pb-5">
+              <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" style="width: 75%"></div>
+              </div>
+            </div>
+
+            <Pagetitle
+            href="/register-operatore-3/"
+            link="torna indietro"
+            title="Ci sei quasi!"
+            subtitle="Controlla la tua casella mail! Ti abbiamo inviato un messaggio con un link. Cliccalo per verificare il tuo indirizzo mail e attivare il tuo account."
+            />
+
+            <!-- body -->
+
+            <p>Non hai ricevuto la mail? Controlla lo spam oppure <a href="">richiedi un nuovo link</a> di attivazione.</p>
+
+            <a href="/register-operatore-5/" type="submit" class="btn btn-primary mt-4">Continua</a>
+
+          </div>
+        </div>
+
+
+        <div class="col-md-6">
+          <img class="d-none d-md-block w-100" src="https://salonemilano.my.site.com/identity/resource/1681233057000/SDM/assets/home_salesforce.jpg" alt="">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+ 
+</Layout>
+
+
+<style>
+  main {
+    padding-top: 72px;
+  }
+</style>

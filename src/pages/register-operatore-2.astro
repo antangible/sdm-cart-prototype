@@ -1,0 +1,89 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Pagetitle from '../components/Pagetitle.astro';
+import Cardutente from '../components/Cardutente.astro';
+---
+
+
+
+
+
+<Layout title="Scegli la tipologia di utente">
+
+  <main>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="px-5 py-5 w-75 m-auto">
+            
+            <div class="pt-3 pb-5">
+              <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" style="width: 25%"></div>
+              </div>
+            </div>
+
+            <Pagetitle
+            href="/register-operatore-1/"
+            link="torna indietro"
+            title="Informazioni personali"
+            subtitle="Ci occorrono per garantirti i migliori servizi durante la visita del Saloni e per la raccolta dati statistici anonimi"
+            />
+
+            <!-- form -->
+
+            <form>
+              <div class="mb-3">
+                <label for="tipo-operatore" class="form-label">Tipo di operatore*</label>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected></option>
+                  <option value="1">Ad & Professional</option>
+                  <option value="2">Agente</option>
+                  <option value="3">Buyer</option>
+                  <option value="3">Contractor</option>
+                  <option value="3">Distributore</option>
+                  <option value="3">Fornitore</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="azienda" class="form-label">Nome dello studio o dell'azienda*</label>
+                <input type="text" class="form-control" id="Cognome">
+              </div>
+              <div class="mb-3">
+                <label for="ruolo" class="form-label">Ruolo all'interno dell'azienda*</label>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected></option>
+                  <option value="1">Junior professional</option>
+                  <option value="2">Senior professional</option>
+                  <option value="3">Project manager</option>
+                  <option value="3">Titolare / Manager / Director</option>
+                  <option value="3">Altro</option>
+                </select>
+              </div>
+              <a href="/register-operatore-3/" type="submit" class="btn btn-primary mt-4">Continua</a>
+            </form>
+
+
+
+          </div>
+        </div>
+
+
+        <div class="col-md-6">
+          <img class="d-none d-md-block w-100" src="https://salonemilano.my.site.com/identity/resource/1681233057000/SDM/assets/home_salesforce.jpg" alt="">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+ 
+</Layout>
+
+
+<style>
+  main {
+    padding-top: 72px;
+  }
+</style>
