@@ -12,7 +12,8 @@ import Sectiontitle from "../components/Sectiontitle.astro";
       <div class="row">
         <div class="col-md-8">
           <Pagetitle
-            href="/register-integrata-6/"
+            utente="Operatore del settore"
+            href="/acquisto-integrato-os-4/"
             link="torna indietro"
             title="Intesta i biglietti del Salone del Mobile"
             subtitle="E' necessario intestare i biglietti, e scegliere le date in cui visitare i Saloni in questo momento. Potrai apportare le modifiche nella tua area riservata dopo aver concluso l'acquisto."
@@ -27,23 +28,11 @@ import Sectiontitle from "../components/Sectiontitle.astro";
 
           <!-- Dati intestatario -->
 
-          <div class="border-top pt-4 mt-4 d-md-flex justify-content-between">
+          <div class="border-top pt-4 mt-4">
             <Sectiontitle
                 icon="fa-solid fa-user"
                 title="Dati intestatario"
-                subtitle="Puo usare questi dati per creare un account"
               />
-            <div class="form-check form-switch py-2">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                role="switch"
-                id="flexSwitchCheckChecked"
-              />
-              <label class="form-check-label" for="flexSwitchCheckDefault"
-                >Crea un account con questi dati</label
-              >
-            </div>
           </div>
 
           <form class="padded-box" id="dati-intestatario">
