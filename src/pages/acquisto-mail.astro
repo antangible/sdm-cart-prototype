@@ -1,0 +1,58 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Pagetitle from '../components/Pagetitle.astro';
+import Cardutente from '../components/Cardutente.astro';
+---
+
+
+
+
+
+<Layout title="Scegli la tipologia di utente">
+
+  <main>
+    <div class="container">
+
+      <Pagetitle
+        title="Prima di procedere con l’acquisto, inserisci la tua mail"
+        subtitle="Ci serve per poter associare il biglietto ad una mail esistente"
+      />
+
+      <div class="row">
+        <div class="col-md-6">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <a href="/acquisto-scelta-utente/" type="submit" class="btn btn-primary">Procedi</a>
+          </form>
+        </div>
+      </div>
+
+     
+      
+      <!-- <div class="d-flex">
+        <a href="/login/" type="button" class="btn btn-primary me-2">Accedi</a>
+        <a href="/acquisto-mail/" type="button" class="btn btn-outline-primary">Continua e registrati in seguito</a>
+        <div class="dropdown">
+          <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Continua e registrati in seguito
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/register-integrata-2/">flusso pg</a></li>
+            <li><a class="dropdown-item" href="/register-integrata-2/">flusso pm</a></li>
+            <li><a class="dropdown-item" href="/register-integrata-2/">flusso os</a></li>
+          </ul>
+        </div>
+      </div> -->
+     
+
+    </div>
+  </div>
+</main>
+
+ 
+</Layout>
+

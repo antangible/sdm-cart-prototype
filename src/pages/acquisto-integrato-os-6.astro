@@ -1,0 +1,103 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Product from "../components/Product.astro";
+import Cart from "../components/Cart.astro";
+import Pagetitle from "../components/Pagetitle.astro";
+import Sectiontitle from "../components/Sectiontitle.astro";
+---
+
+<Layout title="Assegna biglietti">
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <Pagetitle
+            href="/register-integrata-6/"
+            link="torna indietro"
+            title="Ci siamo quasi"
+            subtitle="Prima di concludere l’acquisto dobbiamo attivare il tuo account"
+          />
+
+          <p>Controlla la tua casella mail!
+            Ti abbiamo inviato un messaggio con un link.
+            Cliccalo per verificare il tuo indirizzo mail e attivare il tuo account.
+          </p>
+          
+          <p> Non hai ricevuto la mail? Controlla lo spam oppure <a href="">richiedi un nuovo codice</a>.</p>
+
+          <a href="/acquisto-integrato-os-6/" class="btn btn-primary">Procedi</a>
+        
+        </div>
+      </div>
+     </div> 
+  </main>
+</Layout>
+
+<div id="message" class="alert alert-warning d-none" role="alert"></div>
+
+<script>
+  // Ottieni tutti gli elementi checkbox con la classe 'btn-check'
+  const checkboxes = document.querySelectorAll(".btn-check");
+
+  // Aggiungi un ascoltatore di eventi a ciascun checkbox
+  checkboxes.forEach((checkbox) => {
+    checkbox.addEventListener("change", function () {
+      // Conta quante checkbox sono selezionate
+      const selectedCheckboxes =
+        document.querySelectorAll(".btn-check:checked");
+
+      // Ottieni il div del messaggio
+      const messageDiv = document.getElementById("message");
+
+      // Mostra un messaggio se sono selezionate più di 3 date
+      if (selectedCheckboxes.length > 3) {
+        messageDiv.innerHTML = "Puoi selezionare al massimo 3 date.";
+        // Aggiungi classi e attributo role al div
+        messageDiv.classList.remove("d-none");
+        messageDiv.classList.add("alert", "alert-warning");
+        messageDiv.setAttribute("role", "alert");
+        // Disabilita la checkbox appena selezionata
+        this.checked = false;
+      } else {
+        messageDiv.innerHTML = ""; // Cancella il messaggio se le selezioni sono valide
+        // Rimuovi classi e attributo role dal div
+        messageDiv.classList.add("d-none");
+        messageDiv.classList.remove("alert", "alert-warning");
+        messageDiv.removeAttribute("role");
+      }
+    });
+  });
+
+  // Get the "Procedi" button element
+  const proceedButton = document.querySelector('.cta-cart-proceed');
+
+  // Add click event listener to the "Procedi" button
+  proceedButton.addEventListener("click", function (event) {
+    const selectedCheckboxes = document.querySelectorAll(".btn-check:checked");
+
+    // If the number of selected dates is not equal to three
+    if (selectedCheckboxes.length !== 3) {
+      event.preventDefault(); // Stop the navigation to the next page
+      const messageDiv = document.getElementById("message");
+
+      messageDiv.innerHTML =
+        "Attenzione, non hai selezionato le 3 date previste dal tuo biglietto.";
+      // Add classes and attribute role to the div
+      messageDiv.classList.remove("d-none");
+      messageDiv.classList.add("alert", "alert-warning");
+      messageDiv.setAttribute("role", "alert");
+
+      document.querySelector(".select-date").classList.add("bg-warning", "bg-gradient", "bg-opacity-25");
+      
+    }
+  });
+
+
+</script>
+
+
+<style>
+  .padded-box {
+    padding-left: 40px;
+  }
+</style>
