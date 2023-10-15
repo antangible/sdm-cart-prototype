@@ -28,16 +28,16 @@ const { title } = Astro.props;
 		<div class="container-fluid shadow-lg fixed-top bg-white">
 			<div class="container">
 				<header class="d-flex flex-wrap justify-content-between">
-					<a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+					<a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none d-none d-md-block">
 					<img src="https://www.salonemilano.it/themes/custom/sdm/images/header/logo-black.svg" alt="">
+					</a>
+					<a class="d-md-none" href="/">
+						<img width="100px" src="https://www.noleggiodesign.com/wp-content/uploads/logo-salone-del-mobile.jpg" alt="">
 					</a>
 
 					<div class="py-4">
-						<!-- <a class="btn btn-outline-primary btn-sm" href="/cart-step-1/">Acquisto da loggato</a> -->
 						<a class="btn btn-outline-primary btn-sm" href="/acquisto-snodo/">Acquista biglietti</a>
 					</div>
-
-					
 			
 					<ul class="nav nav-pills d-none d-md-flex py-3">
 						<li class="nav-item"><a href="#" class="nav-link">Designer stories</a></li>
@@ -49,7 +49,7 @@ const { title } = Astro.props;
 					</ul>
 					<ul class="nav nav-pills py-3">
 						<li class="nav-item"><a href="/login/" class="nav-link"><i class="fa-regular fa-user"></i></a></li>
-						<li class="nav-item"><a href="" class="nav-link"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+						<li class="nav-item d-none d-md-block"><a href="" class="nav-link"><i class="fa-solid fa-magnifying-glass"></i></a></li>
 						<li class="nav-item"><a href="" class="nav-link"><i class="fa-solid fa-bars"></i></a></li>
 					</ul>
 				</header>
