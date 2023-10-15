@@ -17,23 +17,16 @@ import Cardutente from '../components/Cardutente.astro';
         title="Sei già registrato al sito?"
         subtitle="Accedi al sito per completare l’acquisto più rapidamente, oppure continua e registrati in un secondo momento."
       />
-      
-      <div class="d-flex">
-        <a href="/login/" type="button" class="btn btn-primary me-2">Accedi</a>
-        <a href="/acquisto-mail/" type="button" class="btn btn-outline-primary">Continua e registrati in seguito</a>
-        <!-- <div class="dropdown">
-          <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Continua e registrati in seguito
-          </button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="/register-integrata-2/">flusso pg</a></li>
-            <li><a class="dropdown-item" href="/register-integrata-2/">flusso pm</a></li>
-            <li><a class="dropdown-item" href="/register-integrata-2/">flusso os</a></li>
-          </ul>
-        </div> -->
-      </div>
-     
 
+      <div class="row">
+        <div class="col-md-6">
+          <div class="d-md-flex">
+            <a href="/login/" type="button" class="btn btn-primary me-2 w-100 mb-md-0 mb-3">Accedi</a>
+            <a href="/acquisto-mail/" type="button" class="btn btn-outline-primary w-100">Continua e registrati in seguito</a>
+          </div>
+
+        </div>
+      </div>
     </div>
   </div>
 </main>
