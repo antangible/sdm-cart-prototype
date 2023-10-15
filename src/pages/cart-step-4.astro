@@ -30,7 +30,7 @@ import Sectiontitle from "../components/Sectiontitle.astro";
 
           <div class="border-top pt-4 mt-4">
             <Sectiontitle
-                icon="fa-solid fa-user"
+                icon="fa-solid fa-user d-none d-md-block"
                 title="Dati intestatario"
               />
           </div>
@@ -143,7 +143,7 @@ import Sectiontitle from "../components/Sectiontitle.astro";
 
           <div class="border-top pt-4 mt-4 select-date">
             <Sectiontitle
-            icon="fa-solid fa-calendar"
+            icon="fa-solid fa-calendar d-none d-md-block"
             title="Seleziona le date"
             subtitle="Puoi selezionare al massimo 3 date"
             />
@@ -236,18 +236,26 @@ import Sectiontitle from "../components/Sectiontitle.astro";
             <div>
 
             <Sectiontitle
-            icon="fa-solid fa-book"
+            icon="fa-solid fa-book d-none d-md-block"
             title="Ritira catalogo in fiera"
             subtitle="quanti cataloghi verranno ritirati da [te]?"
             />
 
           
             </div>
-            <div class="d-flex justify-content-between">
-              <p class="pe-4 mb-0 pt-2">
+            <div class="d-md-flex justify-content-between">
+              <p class="pe-4 mb-md-0 mb-3 pt-2">
                 <span class="fw-bold" id="quantita-cataloghi">[4]</span>
                 cataloghi da assegnare
               </p>
+
+              <!-- <product 
+              title="prova";
+              body="prova";
+              price="prova";
+              id="prova";
+              category="prova"
+              /> -->
               <div class="quantity">
                 <button class="remove-quantity btn btn-secondary" disabled=""
                   >-</button
@@ -264,14 +272,14 @@ import Sectiontitle from "../components/Sectiontitle.astro";
             <div>
 
               <Sectiontitle
-              icon="fa-solid fa-train"
+              icon="fa-solid fa-train d-none d-md-block"
               title="Assegna biglietti Atm"
               subtitle="Quanti biglietti sono intestati a [te]?"
               />
 
             </div>
-            <div class="d-flex justify-content-between">
-              <p class="pe-4 mb-0 pt-2">
+            <div class="d-md-flex justify-content-between">
+              <p class="pe-4 mb-md-0 pt-2">
                 <span class="fw-bold" id="quantita-cataloghi">[4]</span>
                 biglietti da assegnare
               </p>
@@ -289,57 +297,63 @@ import Sectiontitle from "../components/Sectiontitle.astro";
             <div id="consensi" class="border-top pt-4 mt-4">
 
               <Sectiontitle
-              icon="fa-solid fa-shield"
+              icon="fa-solid fa-shield d-none d-md-block"
               title="Gestione dei consensi"
               subtitle="quanti cataloghi verranno ritirati da [te]?"
               />
 
               <div class="pt-3 padded-box">
-                <div class="d-flex">
+                <div class="d-md-flex mb-2">
                   <p class="pe-4">Confermo di aver visionato e compreso la Privacy Policy – INFORMATIVA PIATTAFORMA ai sensi dell’art. 13 del Regolamento (UE) 2016/679 disponibile al link: https://www.salonemilano.it/it/privacy-policy. *</p>
-                  <div class="form-check pe-3">
-                    <input class="form-check-input" type="radio" name="EUflexRadioDefault" id="EUflexRadioDefault1">
-                    <label class="form-check-label" for="EUflexRadioDefault1">
-                      Si
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="EUflexRadioDefault" id="EUflexRadioDefault2" >
-                    <label class="form-check-label" for="EUflexRadioDefault2">
-                      No
-                    </label>
+                  <div class="d-flex">
+                    <div class="form-check pe-3">
+                      <input class="form-check-input" type="radio" name="EUflexRadioDefault" id="EUflexRadioDefault1">
+                      <label class="form-check-label" for="EUflexRadioDefault1">
+                        Si
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="EUflexRadioDefault" id="EUflexRadioDefault2" >
+                      <label class="form-check-label" for="EUflexRadioDefault2">
+                        No
+                      </label>
+                    </div>
                   </div>
                 </div>
   
-                <div class="d-flex">
+                <div class="d-md-flex mb-2">
                   <p class="pe-4">Acconsento al trattamento dei miei dati personali per finalità di profilazione ed analisi di abitudini di consumo da parte di Federlegno Arredo Eventi S.p.A. (Salone del Mobile.Milano) e/o società controllate e /o collegate.</p>
-                  <div class="form-check pe-3">
-                    <input class="form-check-input" type="radio" name="FederlegnoflexRadioDefault" id="FederlegnoflexRadioDefault1">
-                    <label class="form-check-label" for="FederlegnoflexRadioDefault1">
-                      Si
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="FederlegnoflexRadioDefault" id="FederlegnoflexRadioDefault2">
-                    <label class="form-check-label" for="FederlegnoflexRadioDefault2">
-                      No
-                    </label>
+                  <div class="d-flex">
+                    <div class="form-check pe-3">
+                      <input class="form-check-input" type="radio" name="FederlegnoflexRadioDefault" id="FederlegnoflexRadioDefault1">
+                      <label class="form-check-label" for="FederlegnoflexRadioDefault1">
+                        Si
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="FederlegnoflexRadioDefault" id="FederlegnoflexRadioDefault2">
+                      <label class="form-check-label" for="FederlegnoflexRadioDefault2">
+                        No
+                      </label>
+                    </div>
                   </div>
                 </div>
   
-                <div class="d-flex">
+                <div class="d-md-flex mb-2">
                   <p class="pe-4">Acconsento al trattamento dei miei dati personali per la ricezione di comunicazioni con finalità di marketing per le finalità di invio di comunicazioni di natura istituzionale, commerciale e promozionale, ivi inclusi newsletter ed inviti alle iniziative organizzate da Federlegno Arredo Eventi S.p.A.(Salone del Mobile.Milano) e/o società controllate e /o collegate, sondaggi e ricerche di mercato.</p>
-                  <div class="form-check pe-3">
-                    <input class="form-check-input" type="radio" name="mktgflexRadioDefault" id="mktgflexRadioDefault1">
-                    <label class="form-check-label" for="mktgflexRadioDefault1">
-                      Si
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="mktgflexRadioDefault" id="mktgflexRadioDefault2" >
-                    <label class="form-check-label" for="mktgflexRadioDefault2">
-                      No
-                    </label>
+                  <div class="d-flex">
+                    <div class="form-check pe-3">
+                      <input class="form-check-input" type="radio" name="mktgflexRadioDefault" id="mktgflexRadioDefault1">
+                      <label class="form-check-label" for="mktgflexRadioDefault1">
+                        Si
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="mktgflexRadioDefault" id="mktgflexRadioDefault2" >
+                      <label class="form-check-label" for="mktgflexRadioDefault2">
+                        No
+                      </label>
+                    </div>
                   </div>
                 </div>
 
@@ -349,7 +363,7 @@ import Sectiontitle from "../components/Sectiontitle.astro";
         </div>
         
 
-        <Cart CtaText="Procedi e intesta il prossimo biglietto" CtaUrl="/cart-step-5/" />
+        <Cart CtaText="Intesta il prossimo biglietto" CtaUrl="/cart-step-5/" />
 
       </div>
     </div>
@@ -435,7 +449,10 @@ import Sectiontitle from "../components/Sectiontitle.astro";
 
 
 <style>
-  .padded-box {
-    margin-left: 40px;
+
+  @media (min-width: 600px) {
+    .padded-box {
+      margin-left: 40px;
+    }
   }
 </style>
