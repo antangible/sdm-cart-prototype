@@ -4,10 +4,6 @@ import Pagetitle from '../components/Pagetitle.astro';
 import Cardutente from '../components/Cardutente.astro';
 ---
 
-
-
-
-
 <Layout title="Scegli la tipologia di utente">
 
   <main>
@@ -27,20 +23,28 @@ import Cardutente from '../components/Cardutente.astro';
             prezzo1="1 giorno / € 35,00";
             prezzo2="3 giorni/ € 90,00";
             prezzo3="6 giorni / € 180,00";
-            cta="Biglietti da operatore"
-            href="/acquisto-integrato-os-1/"
+            cta="Biglietti da operatore";
+            href="/acquisto-integrato-os-1/";
+            modalid="modal-operatore"
+            modaltarget="#modal-operatore";
+            modaltitle="Operatore del settore";
+            modalbody="Nella categoria degli operatori rientrano: architetti e designer, buyer, decoratori d'interno, distributori e rivenditori, esportatori e importatori, facility manager, general contractor, lighting designer. <p class='mt-3'>In caso di dubbi sulla categoria di appartenenza, ti preghiamo di scrivere a <a href=''>tkt@salonemilano.it</a>"
             />
         </div>
         <div class="col col-md-4">
           <Cardutente
             title="Press&Media";
-            subtitle="Giornalisti, blogger, editor, PR, gotografi, ecc.";
+            subtitle="Giornalisti, Pubblicisti, Art director, Fotografi, Fotoreporter, Cameraman, Autore o conduttore, Stylist";
             entrance="In tutte le giornate";
             prezzo1="Accreedito gratuito su richiesta";
-            prezzo2="3 giorni/ € 90,00s";
-            prezzo3="6 giorni / € 180,00";
-            cta="Biglietti Press&Media"
-            href="/acquisto-integrato-mp-1/"
+            style1="display: none!important";
+            style2="display: none!important";
+            cta="Biglietti Press&Media";
+            href="/acquisto-integrato-mp-1/";
+            modalid="modal-press";
+            modaltarget="#modal-press";
+            modaltitle="Press&Media";
+            modalbody="Rientrano in questa categoria, e hanno diritto all'ingresso gratuito alla fierna con Accredito Giornalisti, Pubblicisti, Art director, Fotografi, Fotoreporter, Cameraman, Autore o conduttore, Stylist.<p class='mt-3'>Non fai parte di questa categoria?</p> Puoi sempre registrarti come <strong>operatore del settore</strong> o <strong>pubblico generico</strong>. In alternativa, scrivi a <a href=''>press@salonemilano.it</a>";
             />
         </div>
         <div class="col col-md-4">
@@ -50,9 +54,13 @@ import Cardutente from '../components/Cardutente.astro';
             entrance="Sabato o domenica. Se sei studente, l’accesso è possibile anche il venerdì.";
             prezzo1="1 giorno / € 35,00";
             prezzo2="1 giorno (studenti)/ €25,00";
-            prezzo3="6 giorni / € 180,00";
+            style2="display: none!important"
             cta="Biglietti per pubblico generico"
             href="/acquisto-integrato-pg-1/"
+            modalid="modal-generico";
+            modaltarget="#modal-generico";
+            modaltitle="Pubblico generico";
+            modalbody="Questa categoria comprende gli studenti e il pubblico generico interessato al design ma la cui attività professionale non è attinente a questo ambito.  <p class='mt-3'>In caso di dubbi sulla categoria di appartenenza, ti preghiamo di scrivere a <a href=''>tkt@salonemilano.it</a>"
             />
         </div>
       </div>

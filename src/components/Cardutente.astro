@@ -8,23 +8,50 @@ interface Props {
   prezzo3: string;
   cta: string;
   href: string;
+  style1?: string;
+  style2?: string;
+  modaltitle: string;
+  modalbody: string;
+  modalid: string;
+  modaltarget: string;
 }
 
-const { title, subtitle, entrance, prezzo1, prezzo2, prezzo3, href, cta } = Astro.props;
+const { title, subtitle, entrance, prezzo1, prezzo2, prezzo3, href, cta, style1, style2, modaltitle, modalbody, modalid, modaltarget } = Astro.props;
 ---
 
 <div class="card bg-light p-2 mb-4">
   <div class="card-body">
-    <h5 class="card-title fw-bold">{title} <i class="fa-solid fa-circle-info text-primary ps-3"></i></h5> 
+
+    <!-- dialog -->
+    <div class="modal fade" id={modalid} tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 fw-bold" id="exampleModalLabel">{modaltitle}</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" set:html={modalbody} />
+        </div>
+      </div>
+    </div>
+
+    <!-- fine modal -->
+
+
+    <h5 class="card-title fw-bold">{title}
+      <a type="button" data-bs-toggle="modal" data-bs-target={modaltarget}>
+        <i class="fa-solid fa-circle-info text-primary ps-3"></i>
+      </a>
+    </h5> 
     <h5>{subtitle}</h5>
     <p class="mb-0 mt-3">Puoi accedere ai Saloni:</p>
     <p><strong>{entrance}</strong></p>
     <ul>
       <li class="text-muted"><i class="fa-solid fa-ticket pe-2"></i><span>{prezzo1} </span></li>
-      <li class="text-muted"><i class="fa-solid fa-ticket pe-2"></i><span>{prezzo2} </span></li>
-      <li class="text-muted"><i class="fa-solid fa-ticket pe-2"></i><span>{prezzo3} </span></li>
+      <li style={style1} class="text-muted"><i class="fa-solid fa-ticket pe-2"></i><span>{prezzo2} </span></li>
+      <li style={style2} class="text-muted"><i class="fa-solid fa-ticket pe-2"></i><span>{prezzo3} </span></li>
     </ul>
-    <a href={href} class="btn btn-primary stretched-link btn-sm mt-4">{cta}</a>
+    <a href={href} class="btn btn-primary btn-sm mt-4">{cta}</a>
   </div>
 </div>
 
