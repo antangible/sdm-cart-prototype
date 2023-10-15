@@ -5,10 +5,7 @@ import Cardutente from '../components/Cardutente.astro';
 ---
 
 
-
-
-
-<Layout title="Operatore | info professionali">
+<Layout title="Press | info professionali">
 
   <main>
     <div class="container-fluid">
@@ -23,7 +20,7 @@ import Cardutente from '../components/Cardutente.astro';
             </div>
 
             <Pagetitle
-            href="/register-press-1/"
+            href="/register-press-1b/"
             link="torna indietro"
             title="Informazioni professionali"
             subtitle="Ci occorrono per garantirti i migliori servizi durante la visita del Saloni e per la raccolta dati statistici anonimi"
@@ -57,8 +54,8 @@ import Cardutente from '../components/Cardutente.astro';
             </form>
 
             <div class="my-5">
-              <h5><strong>Inerisci i dati della tua testata giornalistica</strong></h5>
-              <h5>Puoi aggiungerne altre se collabori con più testate</h5>
+              <h5><strong>Inserisci i dati delle realtà con cui collabori.</strong></h5>
+              <h5>La prima testata, o broadcaster, o agenzia é obbligatoria. Puoi aggiungere altre due testate facoltative.</h5>
             </div>
 
             <div class="accordion accordion-flush" id="testata-1">
@@ -141,36 +138,10 @@ import Cardutente from '../components/Cardutente.astro';
               </div>
             </div>
           </div>
-
-
-            
             
           <button type="button" id="aggiungi-testata" class="btn btn-sm btn-outline-secondary w-100 my-4">Aggiungi un'altra testata</button>
 
-          <h5 class="mt-4"><strong>Altre collaborazioni</strong></h5>
-          <form action="" class="d-flex">
-            <div class="mb-3 w-100">
-              <label for="azienda" class="form-label">Nome della testata</label>
-              <input type="text" class="form-control" id="nome-testata">
-            </div>
-            <div class="mb-3 w-100">
-              <label for="azienda" class="form-label">Nazione</label>
-              <input type="text" class="form-control" id="città-testata">
-            </div>
-          </form>
-
-          <form action="" class="d-flex g-4">
-            <div class="mb-3 w-100">
-              <label for="azienda" class="form-label">Nome della testata</label>
-              <input type="text" class="form-control" id="nome-testata">
-            </div>
-            <div class="mb-3 w-100">
-              <label for="azienda" class="form-label">Nazione</label>
-              <input type="text" class="form-control" id="città-testata">
-            </div>
-          </form>
-
-          <a href="/register-press-3/" type="submit" class="btn btn-primary mt-4">Continua</a>
+          <a href="/register-press-2b/" type="submit" class="btn btn-primary mt-4">Continua</a>
         </div>
       </div>
           
@@ -230,62 +201,6 @@ document.addEventListener("DOMContentLoaded", function() {
                   <label for="azienda" class="form-label">Città*</label>
                   <input type="text" class="form-control" id="città-testata">
                 </div>
-                <div class="mb-3">
-                  <label for="azienda" class="form-label">Nazione*</label>
-                  <input type="text" class="form-control" id="nazione-testata">
-                </div>
-                <div class="mb-3">
-                  <label for="azienda" class="form-label">Sito web*</label>
-                  <input type="text" class="form-control" id="sito-testata">
-                </div>
-                <div class="mb-3">
-                  <label for="ruolo" class="form-label">Tipologia*</label>
-                  <select class="form-select" aria-label="tipo-testata">
-                    <option selected></option>
-                    <option value="1">Quotidiano</option>
-                    <option value="2">Settimanale</option>
-                    <option value="3">Mensile</option>
-                    <option value="3">Bimestrale</option>
-                    <option value="3">Semestrale</option>
-                    <option value="3">Annuale</option>
-                    <option value="3">Semestrale</option>
-                    <option value="3">Agenzia stampa</option>
-                    <option value="3">Agenzia fotografica</option>
-                    <option value="3">Radio</option>
-                    <option value="3">Televisione</option>
-                    <option value="3">Altro</option>
-                  </select>
-                </div>
-                <div class="mb-3">
-                  <label for="ruolo" class="form-label">Settore*</label>
-                  <select class="form-select" aria-label="tipo-testata">
-                    <option selected></option>
-                    <option value="1">Architettura</option>
-                    <option value="2">Arte</option>
-                    <option value="3">Attualità </option>
-                    <option value="3">Cultura</option>
-                    <option value="3">Design</option>
-                    <option value="3">Economia</option>
-                    <option value="3">Edilizia</option>
-                    <option value="3">Food</option>
-                    <option value="3">Formazione</option>
-                    <option value="3">Fotografia</option>
-                    <option value="3">Lifestyle</option>
-                    <option value="3">Luxury</option>
-                    <option value="3">Moda</option>
-                    <option value="3">Ospitalità</option>
-                    <option value="3">Sostenibilità</option>
-                    <option value="3">LuSportxury</option>
-                    <option value="3">Tecnologia</option>
-                    <option value="3">Viaggi</option>
-                    <option value="3">Specializzato Bagno</option>
-                    <option value="3">Specializzato Cucina</option>
-                    <option value="3">Specializzato Elettrodomestici</option>
-                    <option value="3">Specializzato Illuminazione</option>
-                    <option value="3">Specializzato Ufficio</option>
-                    <option value="3">Test</option>
-                    <option value="3">Altro</option>
-                  </select>
               </form>
             </div>
           </div>

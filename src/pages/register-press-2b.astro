@@ -1,0 +1,88 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Pagetitle from '../components/Pagetitle.astro';
+import Cardutente from '../components/Cardutente.astro';
+---
+
+
+
+
+
+<Layout title="Operatore | gestione del consenso">
+
+  <main>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="px-5 py-5 w-75 m-auto">
+            
+            <div class="pt-3 pb-5">
+              <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" style="width: 50%"></div>
+              </div>
+            </div>
+
+            <Pagetitle
+            href="/register-press-2/"
+            link="torna indietro"
+            title="Gestione del consenso"
+            subtitle="Gestisci al meglio le comunicazioni con il Salone del mobile"
+            />
+
+            <!-- form -->
+
+            <div>
+
+              <p>Acconsento al trattamento dei miei dati personali per la ricezione di comunicazioni con finalità di marketing per le finalità di invio di comunicazioni di natura istituzionale, commerciale e promozionale, ivi inclusi newsletter ed inviti alle iniziative organizzate da Federlegno Arredo Eventi S.p.A.(Salone del Mobile.Milano) e/o società controllate e /o collegate, sondaggi e ricerche di mercato.</p>
+              <div class="d-flex mb-4">
+                <div class="form-check me-4">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                  <label class="form-check-label" for="flexRadioDefault1">Si</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                  <label class="form-check-label" for="flexRadioDefault2">No</label>
+                </div>
+              </div>
+            </div>
+
+            <div>
+
+              <p>Acconsento al trattamento dei miei dati personali per finalità di profilazione ed analisi di abitudini di consumo da parte di Federlegno Arredo Eventi S.p.A. (Salone del Mobile.Milano) e/o società controllate e /o collegate.</p>
+              <div class="d-flex mb-4">
+                <div class="form-check me-4">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                  <label class="form-check-label" for="flexRadioDefault1">Si</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                  <label class="form-check-label" for="flexRadioDefault2">No</label>
+                </div>
+              </div>
+            </div>
+
+            <a href="/register-press-3/" type="submit" class="btn btn-primary mt-4">Continua</a>
+
+          </div>
+        </div>
+
+
+        <div class="col-md-6">
+          <img class="d-none d-md-block w-100" src="https://salonemilano.my.site.com/identity/resource/1681233057000/SDM/assets/home_salesforce.jpg" alt="">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+ 
+</Layout>
+
+
+<style>
+  main {
+    padding-top: 72px;
+  }
+</style>

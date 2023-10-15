@@ -5,10 +5,7 @@ import Cardutente from '../components/Cardutente.astro';
 ---
 
 
-
-
-
-<Layout title="Press | info personali">
+<Layout title="Press | contatti professionali">
 
   <main>
     <div class="container-fluid">
@@ -23,9 +20,9 @@ import Cardutente from '../components/Cardutente.astro';
             </div>
 
             <Pagetitle
-            href="/register-scelta-utente/"
+            href="/register-press-1/"
             link="torna indietro"
-            title="Informazioni personali"
+            title="Informazioni di contatto professionale"
             subtitle="Ci occorrono per garantirti i migliori servizi durante la visita del Saloni e per la raccolta dati statistici anonimi"
             />
 
@@ -33,23 +30,27 @@ import Cardutente from '../components/Cardutente.astro';
 
             <form class="d-grid">
               <div class="mb-3">
-                <label for="Nome" class="form-label">Nome*</label>
-                <input type="text" class="form-control" id="nome" aria-describedby="nomeHelp">
-                <!-- <div id="nomeHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                <label for="Telefono" class="form-label">Mail*</label>
+                <input type="mail" class="form-control" id="Telefono">
               </div>
               <div class="mb-3">
-                <label for="Cognome" class="form-label">Cognome*</label>
-                <input type="text" class="form-control" id="Cognome">
+                <label for="Telefono" class="form-label">Telefono</label>
+                <input type="text" class="form-control" id="Telefono">
               </div>
               <div class="mb-3">
-                <label for="Telefono" class="form-label">Nazionalità*</label>
+                <label for="Telefono" class="form-label">Città*</label>
+                <input type="text" class="form-control" id="Città">
+              </div>
+              <div class="mb-3">
+                <label for="Telefono" class="form-label">Cap</label>
+                <input type="text" class="form-control" id="cap">
+              </div>
+              <div class="mb-3">
+                <label for="Telefono" class="form-label">Nazione*</label>
                 <input type="text" class="form-control" id="Nazione">
               </div>
-              <a href="/register-press-1b/" type="submit" class="btn btn-primary mt-4">Continua</a>
+              <a href="/register-press-2/" type="submit" class="btn btn-primary mt-4">Continua</a>
             </form>
-
-
-
           </div>
         </div>
 
