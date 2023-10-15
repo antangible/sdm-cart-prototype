@@ -11,8 +11,8 @@ const { title, body, price, id, category } = Astro.props;
 ---
 
 <div class="product bg-light p-4 mb-2" data-product={id} data-category={category}>
-	<div class="d-flex justify-content-between">
-		<div>
+	<div class="d-md-flex justify-content-between">
+		<div class="mb-md-0 mb-3">
 			<p class="fs-5 fw-bold mb-0">{title}</p>
 			<p class="mb-0">{body} - € <span class="product-price">{price}</span></p>
 		</div>
