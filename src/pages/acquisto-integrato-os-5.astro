@@ -30,12 +30,13 @@ import Sectiontitle from "../components/Sectiontitle.astro";
 
           <div class="border-top pt-4 mt-4">
             <Sectiontitle
-                icon="fa-solid fa-user"
+                icon="fa-solid fa-user d-none d-md-block"
                 title="Dati intestatario"
               />
           </div>
 
           <form class="padded-box" id="dati-intestatario">
+           
             <div class="row g-3 pb-3">
               <div class="col-md-6">
                 <label for="exampleFormControlInput1" class="form-label"
@@ -130,7 +131,7 @@ import Sectiontitle from "../components/Sectiontitle.astro";
 
           <div class="border-top pt-4 mt-4 select-date">
             <Sectiontitle
-            icon="fa-solid fa-calendar"
+            icon="fa-solid fa-calendar d-none d-md-block"
             title="Seleziona le date"
             subtitle="Puoi selezionare al massimo 3 date"
             />
@@ -215,75 +216,76 @@ import Sectiontitle from "../components/Sectiontitle.astro";
           <!-- cross sell -->
 
           <div
-            id="cross-sell-catalogo"
-            class="border-top pt-4 mt-4 d-md-flex justify-content-between"
+          id="cross-sell-catalogo"
+          class="border-top pt-4 mt-4 d-md-flex justify-content-between"
           >
 
-          
-            <div>
 
-            <Sectiontitle
-            icon="fa-solid fa-book"
-            title="Ritira catalogo in fiera"
-            subtitle="quanti cataloghi verranno ritirati da [te]?"
-            />
+          <div>
 
-          
+          <Sectiontitle
+          icon="fa-solid fa-book d-none d-md-block"
+          title="Ritira catalogo in fiera"
+          subtitle="quanti cataloghi verranno ritirati da [te]?"
+          />
+
+
+          </div>
+          <div class="d-md-flex justify-content-between">
+            <p class="pe-4 mb-md-0 mb-3 pt-2">
+              <span class="fw-bold" id="quantita-cataloghi">[4]</span>
+              cataloghi da assegnare
+            </p>
+            <div class="quantity">
+              <button class="remove-quantity btn btn-secondary" disabled=""
+                >-</button
+              ><span class="product-quantity px-3">0</span><button
+                class="add-quantity btn btn-secondary">+</button>
             </div>
-            <div class="d-flex justify-content-between">
-              <p class="pe-4 mb-0 pt-2">
-                <span class="fw-bold" id="quantita-cataloghi">[4]</span>
-                cataloghi da assegnare
-              </p>
-              <div class="quantity">
-                <button class="remove-quantity btn btn-secondary" disabled=""
-                  >-</button
-                ><span class="product-quantity px-3">0</span><button
-                  class="add-quantity btn btn-secondary">+</button>
-              </div>
-            </div>
+          </div>
           </div>
 
           <div
-            id="cross-sell-biglietti-atm"
-            class="border-top pt-4 mt-4 d-md-flex justify-content-between"
+          id="cross-sell-biglietti-atm"
+          class="border-top pt-4 mt-4 d-md-flex justify-content-between"
           >
-            <div>
+          <div>
 
-              <Sectiontitle
-              icon="fa-solid fa-train"
-              title="Assegna biglietti Atm"
-              subtitle="Quanti biglietti sono intestati a [te]?"
-              />
+            <Sectiontitle
+            icon="fa-solid fa-train d-none d-md-block"
+            title="Assegna biglietti Atm"
+            subtitle="Quanti biglietti sono intestati a [te]?"
+            />
 
-            </div>
-            <div class="d-flex justify-content-between">
-              <p class="pe-4 mb-0 pt-2">
-                <span class="fw-bold" id="quantita-cataloghi">[4]</span>
-                biglietti da assegnare
-              </p>
-              <div class="quantity">
-                <button class="remove-quantity btn btn-secondary" disabled=""
-                  >-</button
-                ><span class="product-quantity px-3">0</span><button
-                  class="add-quantity btn btn-secondary">+</button>
-              </div>
+          </div>
+          <div class="d-md-flex justify-content-between">
+            <p class="pe-4 mb-md-0 pt-2">
+              <span class="fw-bold" id="quantita-cataloghi">[4]</span>
+              biglietti da assegnare
+            </p>
+            <div class="quantity">
+              <button class="remove-quantity btn btn-secondary" disabled=""
+                >-</button
+              ><span class="product-quantity px-3">0</span><button
+                class="add-quantity btn btn-secondary">+</button>
             </div>
           </div>
+          </div>
 
-             <!-- Gestione dei consensi -->
+            <!-- Gestione dei consensi -->
 
-            <div id="consensi" class="border-top pt-4 mt-4">
+          <div id="consensi" class="border-top pt-4 mt-4">
 
-              <Sectiontitle
-              icon="fa-solid fa-shield"
-              title="Gestione dei consensi"
-              subtitle="quanti cataloghi verranno ritirati da [te]?"
-              />
+            <Sectiontitle
+            icon="fa-solid fa-shield d-none d-md-block"
+            title="Gestione dei consensi"
+            subtitle="quanti cataloghi verranno ritirati da [te]?"
+            />
 
-              <div class="pt-3 padded-box">
+            <div class="pt-3 padded-box">
+              <div class="d-md-flex mb-2">
+                <p class="pe-4">Confermo di aver visionato e compreso la Privacy Policy – INFORMATIVA PIATTAFORMA ai sensi dell’art. 13 del Regolamento (UE) 2016/679 disponibile al link: https://www.salonemilano.it/it/privacy-policy. *</p>
                 <div class="d-flex">
-                  <p class="pe-4">Confermo di aver visionato e compreso la Privacy Policy – INFORMATIVA PIATTAFORMA ai sensi dell’art. 13 del Regolamento (UE) 2016/679 disponibile al link: https://www.salonemilano.it/it/privacy-policy. *</p>
                   <div class="form-check pe-3">
                     <input class="form-check-input" type="radio" name="EUflexRadioDefault" id="EUflexRadioDefault1">
                     <label class="form-check-label" for="EUflexRadioDefault1">
@@ -297,9 +299,11 @@ import Sectiontitle from "../components/Sectiontitle.astro";
                     </label>
                   </div>
                 </div>
-  
+              </div>
+
+              <div class="d-md-flex mb-2">
+                <p class="pe-4">Acconsento al trattamento dei miei dati personali per finalità di profilazione ed analisi di abitudini di consumo da parte di Federlegno Arredo Eventi S.p.A. (Salone del Mobile.Milano) e/o società controllate e /o collegate.</p>
                 <div class="d-flex">
-                  <p class="pe-4">Acconsento al trattamento dei miei dati personali per finalità di profilazione ed analisi di abitudini di consumo da parte di Federlegno Arredo Eventi S.p.A. (Salone del Mobile.Milano) e/o società controllate e /o collegate.</p>
                   <div class="form-check pe-3">
                     <input class="form-check-input" type="radio" name="FederlegnoflexRadioDefault" id="FederlegnoflexRadioDefault1">
                     <label class="form-check-label" for="FederlegnoflexRadioDefault1">
@@ -313,9 +317,11 @@ import Sectiontitle from "../components/Sectiontitle.astro";
                     </label>
                   </div>
                 </div>
-  
+              </div>
+
+              <div class="d-md-flex mb-2">
+                <p class="pe-4">Acconsento al trattamento dei miei dati personali per la ricezione di comunicazioni con finalità di marketing per le finalità di invio di comunicazioni di natura istituzionale, commerciale e promozionale, ivi inclusi newsletter ed inviti alle iniziative organizzate da Federlegno Arredo Eventi S.p.A.(Salone del Mobile.Milano) e/o società controllate e /o collegate, sondaggi e ricerche di mercato.</p>
                 <div class="d-flex">
-                  <p class="pe-4">Acconsento al trattamento dei miei dati personali per la ricezione di comunicazioni con finalità di marketing per le finalità di invio di comunicazioni di natura istituzionale, commerciale e promozionale, ivi inclusi newsletter ed inviti alle iniziative organizzate da Federlegno Arredo Eventi S.p.A.(Salone del Mobile.Milano) e/o società controllate e /o collegate, sondaggi e ricerche di mercato.</p>
                   <div class="form-check pe-3">
                     <input class="form-check-input" type="radio" name="mktgflexRadioDefault" id="mktgflexRadioDefault1">
                     <label class="form-check-label" for="mktgflexRadioDefault1">
@@ -329,10 +335,11 @@ import Sectiontitle from "../components/Sectiontitle.astro";
                     </label>
                   </div>
                 </div>
-
               </div>
 
             </div>
+
+          </div>
         </div>
         
 
@@ -402,12 +409,38 @@ import Sectiontitle from "../components/Sectiontitle.astro";
     }
   });
 
+  // mostra nascondi dati operatore
+
+  document.addEventListener("DOMContentLoaded", function () {
+  // Get the switch and the div element
+  var switchElement = document.getElementById("flexSwitchCheckChecked");
+  var operatoreDiv = document.getElementById("dati-operatore");
+
+  // Add event listener to the switch
+  switchElement.addEventListener("change", function () {
+    if (switchElement.checked) {
+      // If switch is checked, make the div visible
+      operatoreDiv.classList.remove("d-none");
+      operatoreDiv.classList.add("d-block");
+    } else {
+      // If switch is unchecked, hide the div
+      operatoreDiv.classList.remove("d-block");
+      operatoreDiv.classList.add("d-none");
+    }
+  });
+});
+
 
 </script>
 
 
 <style>
-  .padded-box {
-    padding-left: 40px;
+  @media (min-width: 600px) {
+      .padded-box {
+        margin-left: 40px;
+      }
+    }
+  .select-label {
+    margin-bottom: 9px;
   }
 </style>
