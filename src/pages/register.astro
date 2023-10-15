@@ -60,17 +60,22 @@ import Pagetitle from '../components/Pagetitle.astro';
 <style>
   main {
     padding-top: 72px;
-}
+  }
   ul {
     list-style: none;
     padding: 0;
   }
-    li {
-    padding-bottom: 8px;
+  li {
+  padding-bottom: 8px;
+  }
+  .fs-7 {
+  font-size: 12px;
+  }
+  @media (max-width: 600px) {
+    .w-75 {
+      width: 100%!important;
     }
-    .fs-7 {
-    font-size: 12px;
-    }
+  }
 </style>
 
 <!-- controlli sulla password -->
