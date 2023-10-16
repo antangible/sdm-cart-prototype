@@ -12,10 +12,12 @@ netlifyIdentity.on('logout', function(user) {
 
 function showSite() {
   siteDiv.style.display = "block";
+  NetlifyLoginCtrl.classList.add("logged-in")
   // NetlifyLoginCtrl.style.display = "none";
 }
 
 function hideSite() {
   siteDiv.style.display = "none";
+  NetlifyLoginCtrl.classList.remove("logged-in")
   // NetlifyLoginCtrl.style.display = "block";
 }

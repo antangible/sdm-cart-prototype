@@ -180,13 +180,21 @@ const { title } = Astro.props;
 
 	[data-netlify-identity-menu] {
 		position: fixed;
-		bottom: 0;
-		right: 0;
-		background-color: #f2caca;
-		text-align: center;
-		padding: 8px;
-		z-index: 9999;
-
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		&.logged-in {
+			position: fixed;
+			top: initial;
+			left: initial;
+			transform: initial;
+			bottom: 0;
+			right: 0;
+			background-color: #f2caca;
+			text-align: center;
+			padding: 8px;
+			z-index: 9999;
+		}
 		ul {
 			list-style: none;
 			margin: 0;
@@ -201,6 +209,10 @@ const { title } = Astro.props;
 		.netlify-identity-signup {
 			display: none;
 		}
+	}
+
+	#netlify-identity-widget {
+		z-index: 9999 !important;
 	}
 
 </style>
