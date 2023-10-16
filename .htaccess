@@ -1,1 +1,4 @@
-sdm:$apr1$d5vkrQnC$dU1axU9n5qozydoYv6AGF0
+AuthType Basic
+AuthName "Login prototipo"
+AuthUserFile /path/to/.htpasswd
+Require valid-user
