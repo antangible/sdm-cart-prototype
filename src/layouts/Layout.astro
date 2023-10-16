@@ -188,11 +188,8 @@ const { title } = Astro.props;
 			top: initial;
 			left: initial;
 			transform: initial;
-			bottom: 0;
-			right: 0;
-			background-color: #f2caca;
-			text-align: center;
-			padding: 8px;
+			bottom: 8px;
+			right: 4px;
 			z-index: 9999;
 		}
 		ul {
@@ -200,15 +197,27 @@ const { title } = Astro.props;
 			margin: 0;
 			padding: 0;
 		}
-
-		li a {
-			color: #000;
-			font-weight: bold;
-		}
 		.netlify-identity-user-details,
 		.netlify-identity-signup {
 			display: none;
 		}
+
+		.netlify-identity-login {
+			background-color: #0d6efd;
+			color: #fff;
+			padding: 8px 12px;
+			border-radius: 4px;
+			text-decoration: none;
+		}
+
+		.netlify-identity-logout {
+			background-color: #dc3545;
+			color: #fff;
+			padding: 8px 12px;
+			border-radius: 4px;
+			text-decoration: none;
+		}
+
 	}
 
 	#netlify-identity-widget {

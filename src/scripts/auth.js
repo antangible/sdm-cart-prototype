@@ -19,5 +19,4 @@ function showSite() {
 function hideSite() {
   siteDiv.style.display = "none";
   NetlifyLoginCtrl.classList.remove("logged-in")
-  // NetlifyLoginCtrl.style.display = "block";
 }
