@@ -1,0 +1,397 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Product from "../components/Product.astro";
+import Cart from "../components/Cart.astro";
+import Pagetitle from "../components/Pagetitle.astro";
+import Sectiontitle from "../components/Sectiontitle.astro";
+---
+
+<Layout title="Assegna biglietti">
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <Pagetitle
+            href="/cart-step-pg-4/"
+            utente="Pubblico generico"
+            link="torna indietro"
+            title="Intesta i biglietti del Salone del Mobile"
+            subtitle="E' necessario intestare i biglietti, e scegliere la data in cui visitare i Saloni in questo momento. Potrai apportare le modifiche nella tua area riservata dopo aver concluso l'acquisto."
+          />
+
+          <h3 class="fw-bold">Biglietto 2 di 2</h3>
+          <div class="mb-0">
+            <strong>Tipologia:</strong> Biglietto per pubblico generico (studenti) | <strong>Taglio:</strong> 1 giorni 
+          </div>
+
+          <!-- Dati intestatario -->
+
+          <div class="border-top pt-4 mt-4">
+            <Sectiontitle
+                icon="fa-solid fa-user d-none d-md-block"
+                title="Dati intestatario"
+              />
+          </div>
+
+          <div class="form-check form-switch padded-box py-4">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              role="switch"
+              id="flexSwitchCheckChecked"
+            />
+            <label class="form-check-label" for="flexSwitchCheckDefault"
+              >Usa i miei dati per questo biglietto</label
+            >
+          </div>
+          
+
+          <form class="form-switch" id="dati-intestatario">
+            <div class="row g-3 pb-3">
+              <div class="col-md-6">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Nome*</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Cognome*</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                />
+              </div>
+            </div>
+            <div class="row g-3 pb-3">
+              <div class="col-md-6">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Email*</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Telefono</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                />
+              </div>
+            </div>
+            <div class="row g-3 pb-3">
+              <div class="col-md-6">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Nazione*</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Provincia*</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                />
+              </div>
+            </div>
+            <div class="row g-3 pb-3">
+              <div class="col-md-6">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Città*</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Cap*</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                />
+              </div>
+            </div>
+          </form>
+
+          <!-- seleziona date -->
+
+          <div class="border-top pt-4 mt-4 select-date">
+            <Sectiontitle
+            icon="fa-solid fa-calendar d-none d-md-block"
+            title="Seleziona la data"
+            subtitle="Con questo tipo di biglietto puoi selezionare al massimo 1 date"
+            />
+            <div class="padded-box pt-4 d-md-flex">
+              <div class="w-100 pe-md-4 pb-4">
+                <input
+                  type="checkbox"
+                  class="btn-check"
+                  id="btn-check-18"
+                  autocomplete="off"
+                />
+                <label
+                  class="btn btn-outline-secondary w-100"
+                  for="btn-check-18">18 aprile</label
+                >
+              </div>
+              <div class="w-100">
+                <input
+                  type="checkbox"
+                  class="btn-check"
+                  id="btn-check-19"
+                  autocomplete="off"
+                />
+                <label
+                  class="btn btn-outline-secondary w-100"
+                  for="btn-check-19">19 aprile</label
+                >
+              </div>
+            </div>
+
+            <div id="message"></div>
+          </div>
+
+          <!-- cross sell -->
+
+          <div
+            id="cross-sell-catalogo"
+            class="border-top pt-4 mt-4 d-md-flex justify-content-between">
+            
+            <div>
+
+            <Sectiontitle
+            icon="fa-solid fa-book d-none d-md-block"
+            title="Ritira catalogo in fiera"
+            subtitle="Quanti cataloghi verranno ritirati dal accompagnatore?"
+            />
+
+          
+            </div>
+            <div class="d-md-flex justify-content-between">
+              <p class="pe-4 mb-md-0 mb-3 pt-2">
+                <span class="fw-bold" id="quantita-cataloghi">[1]</span>
+                catalogo da assegnare
+              </p>
+              <div class="quantity">
+                <button class="remove-quantity btn btn-secondary" disabled=""
+                  >-</button
+                ><span class="product-quantity px-3">0</span><button
+                  class="add-quantity btn btn-secondary">+</button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            id="cross-sell-biglietti-atm"
+            class="border-top pt-4 mt-4 d-md-flex justify-content-between"
+          >
+            <div>
+
+              <Sectiontitle
+              icon="fa-solid fa-train d-none d-md-block"
+              title="Assegna biglietti Atm"
+              subtitle="Quanti biglietti atm sono per il tuo accompagnatore?"
+              />
+
+            </div>
+            <div class="d-md-flex justify-content-between">
+              <p class="pe-4 mb-md-0 pt-2">
+                <span class="fw-bold" id="quantita-cataloghi">[1]</span>
+                biglietto da assegnare
+              </p>
+              <div class="quantity">
+                <button class="remove-quantity btn btn-secondary" disabled=""
+                  >-</button
+                ><span class="product-quantity px-3">0</span><button
+                  class="add-quantity btn btn-secondary">+</button>
+              </div>
+            </div>
+          </div>
+
+             <!-- Gestione dei consensi -->
+
+            <div id="consensi" class="border-top pt-4 mt-4">
+
+              <Sectiontitle
+              icon="fa-solid fa-shield d-none d-md-block"
+              title="Gestione dei consensi"
+              />
+
+              <div class="pt-3 padded-box">
+                <div class="d-md-flex mb-2">
+                  <p class="pe-4">Confermo di aver visionato e compreso la Privacy Policy – INFORMATIVA PIATTAFORMA ai sensi dell’art. 13 del Regolamento (UE) 2016/679 disponibile al link: https://www.salonemilano.it/it/privacy-policy. *</p>
+                  <div class="d-flex">
+                    <div class="form-check pe-3">
+                      <input class="form-check-input" type="radio" name="EUflexRadioDefault" id="EUflexRadioDefault1">
+                      <label class="form-check-label" for="EUflexRadioDefault1">
+                        Si
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="EUflexRadioDefault" id="EUflexRadioDefault2" >
+                      <label class="form-check-label" for="EUflexRadioDefault2">
+                        No
+                      </label>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="d-md-flex mb-2">
+                  <p class="pe-4">Acconsento al trattamento dei miei dati personali per finalità di profilazione ed analisi di abitudini di consumo da parte di Federlegno Arredo Eventi S.p.A. (Salone del Mobile.Milano) e/o società controllate e /o collegate.</p>
+                  <div class="d-flex">
+                    <div class="form-check pe-3">
+                      <input class="form-check-input" type="radio" name="FederlegnoflexRadioDefault" id="FederlegnoflexRadioDefault1">
+                      <label class="form-check-label" for="FederlegnoflexRadioDefault1">
+                        Si
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="FederlegnoflexRadioDefault" id="FederlegnoflexRadioDefault2">
+                      <label class="form-check-label" for="FederlegnoflexRadioDefault2">
+                        No
+                      </label>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="d-md-flex mb-2">
+                  <p class="pe-4">Acconsento al trattamento dei miei dati personali per la ricezione di comunicazioni con finalità di marketing per le finalità di invio di comunicazioni di natura istituzionale, commerciale e promozionale, ivi inclusi newsletter ed inviti alle iniziative organizzate da Federlegno Arredo Eventi S.p.A.(Salone del Mobile.Milano) e/o società controllate e /o collegate, sondaggi e ricerche di mercato.</p>
+                  <div class="d-flex">
+                    <div class="form-check pe-3">
+                      <input class="form-check-input" type="radio" name="mktgflexRadioDefault" id="mktgflexRadioDefault1">
+                      <label class="form-check-label" for="mktgflexRadioDefault1">
+                        Si
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="mktgflexRadioDefault" id="mktgflexRadioDefault2" >
+                      <label class="form-check-label" for="mktgflexRadioDefault2">
+                        No
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+        </div>
+        
+
+        <Cart CtaText="Procedi" CtaUrl="/cart-step-pg-6-recap/" />
+
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<div id="message" class="alert alert-warning d-none" role="alert"></div>
+
+<script>
+  // Ottieni tutti gli elementi checkbox con la classe 'btn-check'
+  const checkboxes = document.querySelectorAll(".btn-check");
+
+  // Aggiungi un ascoltatore di eventi a ciascun checkbox
+  checkboxes.forEach((checkbox) => {
+    checkbox.addEventListener("change", function () {
+      // Conta quante checkbox sono selezionate
+      const selectedCheckboxes =
+        document.querySelectorAll(".btn-check:checked");
+
+      // Ottieni il div del messaggio
+      const messageDiv = document.getElementById("message");
+
+      // Mostra un messaggio se sono selezionate più di 3 date
+      if (selectedCheckboxes.length > 1) {
+        messageDiv.innerHTML = "Puoi selezionare al massimo 1 data.";
+        // Aggiungi classi e attributo role al div
+        messageDiv.classList.remove("d-none");
+        messageDiv.classList.add("alert", "alert-warning");
+        messageDiv.setAttribute("role", "alert");
+        // Disabilita la checkbox appena selezionata
+        this.checked = false;
+      } else {
+        messageDiv.innerHTML = ""; // Cancella il messaggio se le selezioni sono valide
+        // Rimuovi classi e attributo role dal div
+        messageDiv.classList.add("d-none");
+        messageDiv.classList.remove("alert", "alert-warning");
+        messageDiv.removeAttribute("role");
+      }
+    });
+  });
+
+  // Get the "Procedi" button element
+  const proceedButton = document.querySelector('.cta-cart-proceed');
+
+  // Add click event listener to the "Procedi" button
+  proceedButton.addEventListener("click", function (event) {
+    const selectedCheckboxes = document.querySelectorAll(".btn-check:checked");
+
+    // If the number of selected dates is not equal to three
+    if (selectedCheckboxes.length !== 1) {
+      event.preventDefault(); // Stop the navigation to the next page
+      const messageDiv = document.getElementById("message");
+
+      messageDiv.innerHTML =
+        "Attenzione, non hai selezionato le data di ingresso ai Saloni";
+      // Add classes and attribute role to the div
+      messageDiv.classList.remove("d-none");
+      messageDiv.classList.add("alert", "alert-warning");
+      messageDiv.setAttribute("role", "alert");
+
+      document.querySelector(".select-date").classList.add("bg-warning", "bg-gradient", "bg-opacity-25");
+      
+    }
+  });
+
+  // Mostra nascondi form dati intestatario
+
+  // Grab the switch (checkbox) element
+  const switchElement = document.getElementById("flexSwitchCheckChecked");
+
+  // Grab the form element
+  const formElement = document.getElementById("dati-intestatario");
+
+  // Add an event listener to toggle the visibility of the form on checkbox change
+  switchElement.addEventListener("change", function () {
+    if (this.checked) {
+      formElement.style.display = "none";
+    } else {
+      formElement.style.display = "block";
+    }
+  });
+</script>
+
+
+<style>
+
+  @media (min-width: 600px) {
+    .padded-box {
+      margin-left: 40px;
+    }
+  }
+</style>

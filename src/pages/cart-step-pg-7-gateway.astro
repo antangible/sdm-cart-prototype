@@ -1,0 +1,29 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Product from "../components/Product.astro";
+import Cart from "../components/Cart.astro";
+import Pagetitle from "../components/Pagetitle.astro";
+import Sectiontitle from "../components/Sectiontitle.astro";
+import Recapitem from "../components/Recapitem.astro";
+---
+
+<Layout title="Assegna biglietti">
+  <main>
+    <div class="container">
+
+      <Pagetitle
+      href="/cart-step-6-recap/"
+      link="torna indietro"
+    />
+
+      <img class="w-100" src="/gateway.png" alt="">
+
+      <div class="row">
+        <div class="col-md-6"></div>
+        <div class="col-md-6"><a href="/cart-step-pg-8-thankyoupage/" type="button" class="w-100 mt-4 txt-center btn btn-danger btn-lg">Paga ora</a>
+        </div>
+      </div>
+    
+    </div>
+  </main>
+</Layout>
