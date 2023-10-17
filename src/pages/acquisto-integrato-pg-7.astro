@@ -1,0 +1,46 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Product from "../components/Product.astro";
+import Cart from "../components/Cart.astro";
+import Pagetitle from "../components/Pagetitle.astro";
+import Sectiontitle from "../components/Sectiontitle.astro";
+---
+
+<Layout title="Assegna biglietti">
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+
+          <div class="alert alert-success" role="alert">
+            <i class="fa-solid fa-check me-4"></i> Il tuo account è stato attivato correttamente!
+          </div>
+
+
+          <Pagetitle
+          href="/acquisto-integrato-pg-6/"
+            title="Ci siamo quasi"
+            subtitle="Prima di concludere l’acquisto dobbiamo attivare il tuo account"
+          />
+
+          <p>Controlla la tua casella mail.
+            Ti abbiamo inviato un messaggio con un link.
+            Cliccalo per verificare il tuo indirizzo mail e attivare il tuo account.
+          </p>
+          
+
+          <a href="/acquisto-integrato-pg-8-recap/" class="btn btn-primary">Procedi</a>
+        
+        </div>
+      </div>
+     </div> 
+  </main>
+</Layout>
+
+<div id="message" class="alert alert-warning d-none" role="alert"></div>
+
+<style>
+  .padded-box {
+    padding-left: 40px;
+  }
+</style>

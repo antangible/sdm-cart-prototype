@@ -1,0 +1,44 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Product from "../components/Product.astro";
+import Cart from "../components/Cart.astro";
+import Pagetitle from "../components/Pagetitle.astro";
+---
+
+<Layout title="Acquisto catalogo">
+
+	<main>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+					<Pagetitle
+						icona="fa-solid fa-book display-3 text-black-50 d-none d-md-block my-4"
+						href="/acquisto-integrato-pg-1/"
+						link="torna indietro"
+						title="Vuoi acquistare il catalogo della fiera?"
+						subtitle="Puoi acquistarlo ora e ritirarlo di persona quando accederai al Salone del Mobile. Riceverai via mail il voucher per il ritiro del catalogo in fiera."
+						utente="Pubblico generico"
+						/>
+
+					<div class="products container">
+						<div class="row my-3">
+							<div class="col p-0">
+								<Product
+									id="Catalogo Saloni 2024"
+									title="Catalogo Saloni 2024"
+									price={25}
+									body="Catalogo cartaceo da ritirare in fiera"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<Cart CtaText="Procedi" CtaUrl="/acquisto-integrato-pg-3/" />
+				
+			</div>
+		</div>
+	</main>
+</Layout>
+
+<style></style>

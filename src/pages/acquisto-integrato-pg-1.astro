@@ -1,43 +1,108 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Pagetitle from '../components/Pagetitle.astro';
-import Cardutente from '../components/Cardutente.astro';
+import Layout from "../layouts/Layout.astro";
+import Product from "../components/Product.astro";
+import Cart from "../components/Cart.astro";
+import Pagetitle from "../components/Pagetitle.astro";
 ---
 
-<Layout title="Scegli la tipologia di utente">
-
+<Layout title="Acquisto biglietti salone">
   <main>
     <div class="container">
-
-      <Pagetitle
-        href="/acquisto-scelta-utente/"
-        link="Cambia tipo utente"
-        title="Come utente Press & Media, hai diritto all’accredito gratuito"
-        subtitle="Per ottenerlo devi prima registrati al sito. Verifica con attenzione di far parte di questa categoria."
-      />
-
       <div class="row">
-        <div class="col-md-6">
-          <div class="alert alert-info" role="alert">
-            <h5>Chi rientra nella categoria Media & Press?</h5>
-            <ul>
-              <li>giornalisti</li>
-              <li>Pubblicisti</li>
-              <li>Art director</li>
-              <li>Fotografi</li>
-              <li>Fotoreporter</li>
-              <li>Cameraman</li>
-              <li>autore o conduttore Radio o Tv </li>
-              <li>stylist</li>
-            </ul>
-            <p>Non sei tu? <a href="/acquisto-scelta-utente/">Cambia tipo di visitatore</a></p>
+        <div class="col-lg-8">
+          <Pagetitle
+          link="Torna indietro"
+          href="/acquisto-scelta-utente/"
+          icona="fa-solid fa-ticket display-3 text-black-50 d-none d-md-block my-4"
+          title="Di quanti biglietti hai bisogno?"
+          utente="Pubblico generico"
+          />
+          
+          <div class="products container">
+            <div class="row my-3">
+              <div class="col p-0">
+                <Product
+                  id="Biglietto generico - 1 giorno"
+                  title="Biglietto per pubblico generico"
+                  price={35}
+                  body="1 giorno"
+                 
+                />
+              </div>
+            </div>
+            <div class="row my-3">
+              <div class="col p-0">
+                <Product
+                  id="Biglietto generico studenti - 1 giorno"
+                  title="Biglietto per studenti"
+                  price={25}
+                  body="1 giorno"
+                  
+                />
+              </div>
+            </div>
+          </div>
+
+          <div
+            id="alert-message"
+            class="alert alert-danger d-none"
+            role="alert"
+          >
+            Il carrello è vuoto. Aggiungi almeno un prodotto prima di procedere.
           </div>
         </div>
+
+        <Cart CtaText="Procedi" CtaUrl="/acquisto-integrato-pg-2/" />
+
       </div>
     </div>
-  </div>
-</main>
-
- 
+  </main>
 </Layout>
 
+<script>
+  function checkCartNotEmpty() {
+    const numberOfProductsInCart = document.querySelectorAll(".cart-item").length;
+    const alertMessage = document.getElementById("alert-message");
+    const proceedButton = document.querySelector('a[href="/register-integrata-4/"]');
+
+    if (numberOfProductsInCart === 0) {
+      alertMessage.classList.remove("d-none");
+      proceedButton.classList.add("disabled");
+      proceedButton.setAttribute("disabled", "disabled");
+    } else {
+      alertMessage.classList.add("d-none");
+      proceedButton.classList.remove("disabled");
+      proceedButton.removeAttribute("disabled");
+    }
+  }
+
+  const proceedButton = document.querySelector('a[href="/register-integrata-4/"]');
+  if (proceedButton) {
+    proceedButton.addEventListener("click", function(event) {
+      checkCartNotEmpty();
+      
+      if (!document.getElementById("alert-message").classList.contains("d-none")) {
+        event.preventDefault();
+      }
+    });
+  }
+  
+  const addButtons = document.querySelectorAll(".add-quantity");
+  if (addButtons) {
+    addButtons.forEach((button) => {
+      button.addEventListener("click", function() {
+        // Logic to add product to cart
+        // ... you can insert your product addition logic here
+
+        // After adding the product, let's forcefully set the alert to hidden regardless of the cart count
+        const alertMessage = document.getElementById("alert-message");
+        alertMessage.classList.add("d-none");
+
+        // And enable the proceed button
+        const proceedButton = document.querySelector('a[href="/register-integrata-4/"]');
+        proceedButton.classList.remove("disabled");
+        proceedButton.removeAttribute("disabled");
+      });
+    });
+  }
+</script>

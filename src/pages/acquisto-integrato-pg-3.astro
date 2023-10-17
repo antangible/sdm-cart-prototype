@@ -1,0 +1,201 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Product from "../components/Product.astro";
+import Cart from "../components/Cart.astro";
+import Pagetitle from "../components/Pagetitle.astro";
+---
+
+<Layout title="Acquisto biglietti atm">
+
+	<main>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+					<Pagetitle
+						href="/acquisto-integrato-pg-2/"
+						icona="fa-solid fa-train display-3 text-black-50 d-none d-md-block my-4"
+						link="torna indietro"
+						title="Vuoi acquistare un biglietto per il trasporto pubblico di Milano (ATM)?"
+						subtitle="Da quest'anno è possibile comprare i biglietti per la metro di Milano anche sul sito di Salone"
+						utente="Pubblico generico"
+					/>
+
+					<div class="products container">
+						<div class="row my-3">
+							<div class="col p-0">
+								<Product
+									id="Biglietto ordinario"
+									title="Biglietto ordinario"
+									price={2.2}
+									body="90 minuti"
+								/>
+							</div>
+						</div>
+						<div class="row my-3">
+							<div class="col p-0">
+								<Product
+									id="Biglietto giornaliero"
+									title="Biglietto giornaliero"
+									price={7.6}
+									body="24 ore"
+								/>
+							</div>
+						</div>
+					</div>
+
+					<div class="faq pt-4">
+						<h3 class="pb-2">Dubbi o domande?</h3>
+						<div class="accordion accordion-flush" id="accordionFlushExample">
+							<div class="accordion-item">
+								<h2 class="accordion-header" id="flush-headingOne">
+									<button
+										class="accordion-button collapsed"
+										type="button"
+										data-bs-toggle="collapse"
+										data-bs-target="#flush-collapseOne"
+										aria-expanded="false"
+										aria-controls="flush-collapseOne"
+									>
+										Su quali linee valgono i biglietti per Milano e dintorni
+										(zona Mi1-Mi3)?
+									</button>
+								</h2>
+								<div
+									id="flush-collapseOne"
+									class="accordion-collapse collapse"
+									aria-labelledby="flush-headingOne"
+									data-bs-parent="#accordionFlushExample"
+								>
+									<div class="accordion-body">
+										Praesent sed luctus urna, vitae lobortis augue. Mauris augue
+										sem, fermentum sit amet molestie nec, aliquam et lectus. Ut
+										convallis aliquam elementum. Aliquam porttitor neque quis
+										augue eleifend, et dapibus quam sollicitudin. Nunc non diam
+										arcu. Duis mattis erat tristique hendrerit sodales. Morbi
+										lobortis et justo et hendrerit. Maecenas convallis eros eu
+										arcu consectetur, eu dapibus arcu mattis. Nunc non risus
+										fermentum, vestibulum quam ac, gravida sapien. Pellentesque
+										sed lacinia ante, id sagittis quam. Sed ac lorem laoreet,
+										placerat lorem sed, elementum nisl. Nulla non nulla ut nulla
+										lobortis gravida. Nunc et magna sagittis, molestie lectus
+										ac, eleifend orci.
+									</div>
+								</div>
+							</div>
+							<div class="accordion-item">
+								<h2 class="accordion-header" id="flush-headingTwo">
+									<button
+										class="accordion-button collapsed"
+										type="button"
+										data-bs-toggle="collapse"
+										data-bs-target="#flush-collapseTwo"
+										aria-expanded="false"
+										aria-controls="flush-collapseTwo"
+									>
+										Avete meno di 14 anni? Non pagate il biglietto
+									</button>
+								</h2>
+								<div
+									id="flush-collapseTwo"
+									class="accordion-collapse collapse"
+									aria-labelledby="flush-headingTwo"
+									data-bs-parent="#accordionFlushExample"
+								>
+									<div class="accordion-body">
+										Praesent sed luctus urna, vitae lobortis augue. Mauris augue
+										sem, fermentum sit amet molestie nec, aliquam et lectus. Ut
+										convallis aliquam elementum. Aliquam porttitor neque quis
+										augue eleifend, et dapibus quam sollicitudin. Nunc non diam
+										arcu. Duis mattis erat tristique hendrerit sodales. Morbi
+										lobortis et justo et hendrerit. Maecenas convallis eros eu
+										arcu consectetur, eu dapibus arcu mattis. Nunc non risus
+										fermentum, vestibulum quam ac, gravida sapien. Pellentesque
+										sed lacinia ante, id sagittis quam. Sed ac lorem laoreet,
+										placerat lorem sed, elementum nisl. Nulla non nulla ut nulla
+										lobortis gravida. Nunc et magna sagittis, molestie lectus
+										ac, eleifend orci.
+									</div>
+								</div>
+							</div>
+							<div class="accordion-item">
+								<h2 class="accordion-header" id="flush-headingThree">
+									<button
+										class="accordion-button collapsed"
+										type="button"
+										data-bs-toggle="collapse"
+										data-bs-target="#flush-collapseThree"
+										aria-expanded="false"
+										aria-controls="flush-collapseThree"
+									>
+										Dove posso usare i carnet cartacei?
+									</button>
+								</h2>
+								<div
+									id="flush-collapseThree"
+									class="accordion-collapse collapse"
+									aria-labelledby="flush-headingThree"
+									data-bs-parent="#accordionFlushExample"
+								>
+									<div class="accordion-body">
+										Praesent sed luctus urna, vitae lobortis augue. Mauris augue
+										sem, fermentum sit amet molestie nec, aliquam et lectus. Ut
+										convallis aliquam elementum. Aliquam porttitor neque quis
+										augue eleifend, et dapibus quam sollicitudin. Nunc non diam
+										arcu. Duis mattis erat tristique hendrerit sodales. Morbi
+										lobortis et justo et hendrerit. Maecenas convallis eros eu
+										arcu consectetur, eu dapibus arcu mattis. Nunc non risus
+										fermentum, vestibulum quam ac, gravida sapien. Pellentesque
+										sed lacinia ante, id sagittis quam. Sed ac lorem laoreet,
+										placerat lorem sed, elementum nisl. Nulla non nulla ut nulla
+										lobortis gravida. Nunc et magna sagittis, molestie lectus
+										ac, eleifend orci.
+									</div>
+								</div>
+							</div>
+							<div class="accordion-item">
+								<h2 class="accordion-header" id="flush-headingThree">
+									<button
+										class="accordion-button collapsed"
+										type="button"
+										data-bs-toggle="collapse"
+										data-bs-target="#flush-collapseThree"
+										aria-expanded="false"
+										aria-controls="flush-collapseThree"
+									>
+										I prof in gita viaggiano gratis
+									</button>
+								</h2>
+								<div
+									id="flush-collapseThree"
+									class="accordion-collapse collapse"
+									aria-labelledby="flush-headingThree"
+									data-bs-parent="#accordionFlushExample"
+								>
+									<div class="accordion-body">
+										Praesent sed luctus urna, vitae lobortis augue. Mauris augue
+										sem, fermentum sit amet molestie nec, aliquam et lectus. Ut
+										convallis aliquam elementum. Aliquam porttitor neque quis
+										augue eleifend, et dapibus quam sollicitudin. Nunc non diam
+										arcu. Duis mattis erat tristique hendrerit sodales. Morbi
+										lobortis et justo et hendrerit. Maecenas convallis eros eu
+										arcu consectetur, eu dapibus arcu mattis. Nunc non risus
+										fermentum, vestibulum quam ac, gravida sapien. Pellentesque
+										sed lacinia ante, id sagittis quam. Sed ac lorem laoreet,
+										placerat lorem sed, elementum nisl. Nulla non nulla ut nulla
+										lobortis gravida. Nunc et magna sagittis, molestie lectus
+										ac, eleifend orci.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<Cart CtaText="Procedi" CtaUrl="/acquisto-integrato-pg-4" />
+				
+			</div>
+		</div>
+	</main>
+</Layout>
+
+<style></style>

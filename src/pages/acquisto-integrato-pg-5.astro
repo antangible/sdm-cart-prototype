@@ -12,18 +12,16 @@ import Sectiontitle from "../components/Sectiontitle.astro";
       <div class="row">
         <div class="col-md-8">
           <Pagetitle
-            utente="Operatore del settore"
-            href="/acquisto-integrato-os-4/"
+            utente="Pubblico generico"
+            href="/acquisto-integrato-pg-4/"
             link="torna indietro"
             title="Intesta i biglietti del Salone del Mobile"
-            subtitle="E' necessario intestare i biglietti, e scegliere le date in cui visitare i Saloni in questo momento. Potrai apportare le modifiche nella tua area riservata dopo aver concluso l'acquisto."
+            subtitle="E' necessario intestare i biglietti, e scegliere la data in cui visitare i Saloni in questo momento. Potrai apportare le modifiche nella tua area riservata dopo aver concluso l'acquisto."
           />
 
           <h3 class="fw-bold">Biglietto 2 di 2</h3>
           <div class="mb-0">
-            <strong>Tipologia:</strong> Operatore | <strong>Taglio:</strong> 3
-            giorni <button type="button" class="btn btn-link"
-              >Cambia taglio biglietto</button>
+            <strong>Tipologia:</strong> Pubblico generico (studenti) | <strong>Taglio:</strong> 1 giorno 
           </div>
 
           <!-- Dati intestatario -->
@@ -125,15 +123,60 @@ import Sectiontitle from "../components/Sectiontitle.astro";
                 />
               </div>
             </div>
+
+            <!-- <div class="form-check form-switch pt-2 pb-4">
+              <!- <input
+                class="form-check-input"
+                type="checkbox"
+                role="switch"
+                id="flexSwitchCheckChecked"
+              /> -->
+              <!-- <label class="form-check-label" for="flexSwitchCheckDefault"
+                >Utilizza questi dati per creare un account</label>
+                <a class="ms-2" href="" data-bs-toggle="modal" data-bs-target="#exampleModal">Devo registrarmi obbligatoriamente?</a> -->
+
+                <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Devo registrarmi obbligatoriamente?</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <p> Si, sul sito di Salone del Mobile <strong>non è possibile fare acquisti come ospite.</strong></p>
+                      <p>Inoltre, registrandoti al sito potrai:</p>
+                        <ul>
+                          <li>gestire i tuoi biglietti nell’area riservata,</li>
+                          <li>organizzare appuntamenti</li>
+                          <li>partecipare ad eventi dedicati</li>
+                        </ul>
+                        
+                      <p>Se questo biglietto non è il tuo, puoi utilizzare i dati del prossimo per crare il tuo account</p>
+                    </div>
+                  </div>
+                </div>
+              </div> 
+            </div> -->
+
+            <!-- <div class="alert alert-info" role="alert">
+              
+              <p><strong>Devo registrarmi obbligatoriamente?</strong><br>
+                Si, sul sito di Salone del Mobile non è possibile fare acquisti come ospite.
+                Inoltre, registrandoti al sito potrai gestire i tuoi biglietti nell’area riservata,
+                organizzare appuntamenti e partecipare ad eventi dedicati.</p>
+            </div> -->
+
           </form>
+
+          
 
           <!-- seleziona date -->
 
           <div class="border-top pt-4 mt-4 select-date">
             <Sectiontitle
             icon="fa-solid fa-calendar d-none d-md-block"
-            title="Seleziona le date"
-            subtitle="Puoi selezionare al massimo 3 date"
+            title="Seleziona la data"
+            subtitle="Con questo biglietto puoi selezionare al massimo 1 data"
             />
             <div class="padded-box pt-4 d-md-flex">
               <div class="w-100 pe-md-4 pb-4">
@@ -226,15 +269,15 @@ import Sectiontitle from "../components/Sectiontitle.astro";
           <Sectiontitle
           icon="fa-solid fa-book d-none d-md-block"
           title="Ritira catalogo in fiera"
-          subtitle="quanti cataloghi verranno ritirati dal [tuo accompagnatore]?"
+          subtitle="Quanti cataloghi verranno ritirati dal tuo accompagnatore?"
           />
 
 
           </div>
           <div class="d-md-flex justify-content-between">
             <p class="pe-4 mb-md-0 mb-3 pt-2">
-              <span class="fw-bold" id="quantita-cataloghi">[4]</span>
-              cataloghi da assegnare
+              <span class="fw-bold" id="quantita-cataloghi">[1]</span>
+              catalogo da assegnare
             </p>
             <div class="quantity">
               <button class="remove-quantity btn btn-secondary" disabled=""
@@ -254,14 +297,14 @@ import Sectiontitle from "../components/Sectiontitle.astro";
             <Sectiontitle
             icon="fa-solid fa-train d-none d-md-block"
             title="Assegna biglietti Atm"
-            subtitle="Quanti biglietti sono per [il tuo accompagnatore]?"
+            subtitle="Quanti biglietti atm sono per il tuo accopagnatore?"
             />
 
           </div>
           <div class="d-md-flex justify-content-between">
             <p class="pe-4 mb-md-0 pt-2">
-              <span class="fw-bold" id="quantita-cataloghi">[4]</span>
-              biglietti da assegnare
+              <span class="fw-bold" id="quantita-biglietti">[1]</span>
+              biglietto da assegnare
             </p>
             <div class="quantity">
               <button class="remove-quantity btn btn-secondary" disabled=""
@@ -279,7 +322,6 @@ import Sectiontitle from "../components/Sectiontitle.astro";
             <Sectiontitle
             icon="fa-solid fa-shield d-none d-md-block"
             title="Gestione dei consensi"
-            subtitle="quanti cataloghi verranno ritirati da [te]?"
             />
 
             <div class="pt-3 padded-box">
@@ -343,7 +385,7 @@ import Sectiontitle from "../components/Sectiontitle.astro";
         </div>
         
 
-        <Cart CtaText="Procedi" CtaUrl="/acquisto-integrato-os-6/" />
+        <Cart CtaText="Procedi" CtaUrl="/acquisto-integrato-pg-6/" />
 
       </div>
     </div>
@@ -367,8 +409,8 @@ import Sectiontitle from "../components/Sectiontitle.astro";
       const messageDiv = document.getElementById("message");
 
       // Mostra un messaggio se sono selezionate più di 3 date
-      if (selectedCheckboxes.length > 3) {
-        messageDiv.innerHTML = "Puoi selezionare al massimo 3 date.";
+      if (selectedCheckboxes.length > 1) {
+        messageDiv.innerHTML = "Puoi selezionare al massimo 1 data.";
         // Aggiungi classi e attributo role al div
         messageDiv.classList.remove("d-none");
         messageDiv.classList.add("alert", "alert-warning");
@@ -393,12 +435,12 @@ import Sectiontitle from "../components/Sectiontitle.astro";
     const selectedCheckboxes = document.querySelectorAll(".btn-check:checked");
 
     // If the number of selected dates is not equal to three
-    if (selectedCheckboxes.length !== 3) {
+    if (selectedCheckboxes.length !== 1) {
       event.preventDefault(); // Stop the navigation to the next page
       const messageDiv = document.getElementById("message");
 
       messageDiv.innerHTML =
-        "Attenzione, non hai selezionato le 3 date previste dal tuo biglietto.";
+        "Attenzione, non hai selezionato la data del tuo biglietto.";
       // Add classes and attribute role to the div
       messageDiv.classList.remove("d-none");
       messageDiv.classList.add("alert", "alert-warning");
