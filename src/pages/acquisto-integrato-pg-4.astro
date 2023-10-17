@@ -124,49 +124,51 @@ import Sectiontitle from "../components/Sectiontitle.astro";
               </div>
             </div>
 
-            <div class="form-check form-switch pt-2 pb-4">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                role="switch"
-                id="flexSwitchCheckChecked"
-              />
-              <label class="form-check-label" for="flexSwitchCheckDefault"
-                >Utilizza questi dati per creare un account</label>
-                <a class="ms-2" href="" data-bs-toggle="modal" data-bs-target="#exampleModal">Devo registrarmi obbligatoriamente?</a>
+            <div class="alert alert-info my-4">
 
-              
-              <!-- Modal -->
-              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="exampleModalLabel">Devo registrarmi obbligatoriamente?</h1>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      <p> Si, sul sito di Salone del Mobile <strong>non è possibile fare acquisti come ospite.</strong></p>
-                      <p>Inoltre, registrandoti al sito potrai:</p>
-                        <ul>
-                          <li>gestire i tuoi biglietti nell’area riservata,</li>
-                          <li>organizzare appuntamenti</li>
-                          <li>partecipare ad eventi dedicati</li>
-                        </ul>
-                        
-                      <p>Se questo biglietto non è il tuo, puoi utilizzare i dati del prossimo per crare il tuo account</p>
-                    </div>
+              <p><strong>Per acquistare i biglietti è necessario creare un account.</strong><br>
+              Vuoi usare questi dati?</p>
+
+              <div class="d-md-flex mb-4">
+                <div class="form-check pe-3">
+                  <input class="form-check-input" type="radio" name="FederlegnoflexRadioDefault" id="FederlegnoflexRadioDefault1">
+                  <label class="form-check-label" for="FederlegnoflexRadioDefault1">
+                    Si, utilizzo questi dati
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="FederlegnoflexRadioDefault" id="FederlegnoflexRadioDefault2">
+                  <label class="form-check-label" for="FederlegnoflexRadioDefault2">
+                    No, utilizzo i dati del prossimo biglietto
+                  </label>
+                </div>
+              </div>
+              <a class="pt-4" href="" data-bs-toggle="modal" data-bs-target="#exampleModal">Perchè devo registrarmi?</a>
+
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Devo registrarmi obbligatoriamente?</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p> Si, sul sito di Salone del Mobile <strong>non è possibile fare acquisti come ospite.</strong></p>
+                    <p>Inoltre, registrandoti al sito potrai:</p>
+                      <ul>
+                        <li>gestire i tuoi biglietti nell’area riservata,</li>
+                        <li>organizzare appuntamenti</li>
+                        <li>partecipare ad eventi dedicati</li>
+                      </ul>
+                      
+                    <p>Se questo biglietto non è il tuo, puoi utilizzare i dati del prossimo per crare il tuo account</p>
                   </div>
                 </div>
               </div>
             </div>
-
-            <!-- <div class="alert alert-info" role="alert">
-              
-              <p><strong>Devo registrarmi obbligatoriamente?</strong><br>
-                Si, sul sito di Salone del Mobile non è possibile fare acquisti come ospite.
-                Inoltre, registrandoti al sito potrai gestire i tuoi biglietti nell’area riservata,
-                organizzare appuntamenti e partecipare ad eventi dedicati.</p>
-            </div> -->
 
           </form>
 
