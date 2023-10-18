@@ -1,0 +1,134 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Pagetitle from '../components/Pagetitle.astro';
+---
+
+
+<Layout title="Registrati">
+    <main>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="px-0 px-md-5 py-5 w-75 m-auto">
+                <Pagetitle
+                title="Registrati"
+                subtitle="Inserisci mail e password"
+                />
+
+                <div class="mb-4">
+                  <label for="emailInput" class="form-label">Inserisci la tua mail*</label>
+                  <input type="email" class="form-control" id="emailInput">
+              </div>
+              
+              <div class="mb-4">
+                  <label for="passwordInput" class="form-label">Crea la tua password*</label>
+                  <input type="password" class="form-control" id="passwordInput">
+              </div>
+
+                <ul id="pasword-control">
+                  <li id="check-caratteri" class="fs-7 text-black-50"><i class="fa-solid fa-check pe-2"></i> <span>Minimo 8 caratterli</span></li>
+                  <li id="check-maiuscola"  class="fs-7 text-black-50"><i class="fa-solid fa-check pe-2"></i> <span>Almeno una maiuscola</span></li>
+                  <li id="check-speciale" class="fs-7 text-black-50"><i class="fa-solid fa-check pe-2"></i> <span>Almeno una carattere speciale</span></li>
+                </ul>
+
+                <div id="passwordAlert" class="alert alert-danger d-none" role="alert">
+                  Attenzione, la password non soddisfa i criteri di sicurezza.
+                </div>
+                <a href="/register-scelta-utente/" id="registratiButton" class="btn btn-primary mb-4" role="button" aria-disabled="true">Registrati</a>
+                
+              </div>
+            </div>
+            <div class="col-md-6">
+              <img class="d-none d-md-block w-100"  src="https://salonemilano.my.site.com/identity/resource/1681233057000/SDM/assets/home_salesforce.jpg" alt="">
+
+            </div>
+            </div>
+          </div>
+        </div>
+
+    </main>
+</Layout>
+
+
+
+<style>
+  main {
+    padding-top: 72px;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  li {
+  padding-bottom: 8px;
+  }
+  .fs-7 {
+  font-size: 12px;
+  }
+  @media (max-width: 600px) {
+    .w-75 {
+      width: 100%!important;
+    }
+  }
+</style>
+
+<!-- controlli sulla password -->
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const passwordInput = document.getElementById('passwordInput');
+    const registratiButton = document.getElementById('registratiButton');
+    const passwordAlert = document.getElementById('passwordAlert');
+
+    passwordInput.addEventListener('input', function() {
+        const val = passwordInput.value;
+
+        // Check for length
+        if (val.length >= 8) {
+            document.getElementById('check-caratteri').classList.remove('text-black-50');
+            document.getElementById('check-caratteri').classList.add('text-success');
+        } else {
+            document.getElementById('check-caratteri').classList.add('text-black-50');
+            document.getElementById('check-caratteri').classList.remove('text-success');
+        }
+
+        // Check for uppercase
+        if (/[A-Z]/.test(val)) {
+            document.getElementById('check-maiuscola').classList.remove('text-black-50');
+            document.getElementById('check-maiuscola').classList.add('text-success');
+        } else {
+            document.getElementById('check-maiuscola').classList.add('text-black-50');
+            document.getElementById('check-maiuscola').classList.remove('text-success');
+        }
+
+        // Check for special character
+        if (/[\W_]/.test(val)) {
+            document.getElementById('check-speciale').classList.remove('text-black-50');
+            document.getElementById('check-speciale').classList.add('text-success');
+        } else {
+            document.getElementById('check-speciale').classList.add('text-black-50');
+            document.getElementById('check-speciale').classList.remove('text-success');
+        }
+    });
+
+    function validatePassword(event) {
+        const val = passwordInput.value;
+
+        // Validation criteria
+        const hasEightCharacters = val.length >= 8;
+        const hasUppercase = /[A-Z]/.test(val);
+        const hasSpecialCharacter = /[\W_]/.test(val);
+
+        if (!hasEightCharacters || !hasUppercase || !hasSpecialCharacter) {
+            event.preventDefault();
+            passwordAlert.classList.remove('d-none');
+        } else {
+            passwordAlert.classList.add('d-none');
+        }
+    }
+
+    registratiButton.addEventListener('click', validatePassword);
+});
+
+</script>
